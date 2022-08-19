@@ -1,0 +1,121 @@
+*{
+    font-family: -apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;
+
+}
+.container{
+    max-width: 1008px;
+}
+.logo{
+    height: 60px;
+    width: 200px;
+}
+.logo img,
+.logo svg{
+    width: 200px;
+    height: 60px;
+}
+
+.bg_blue{
+    background-color: #163353;
+}
+
+h4.TitleTextWithTagLine{
+    margin: 10px 0;
+    font-size: 1.41421rem;
+}
+h4.TitleTextWithTagLine .TagLine{
+    color: #a1a1a1;
+    font-size: 1.12246rem;
+    font-weight: normal;
+    padding-top: 5px;
+}
+.main_container{
+    background: url('../images/pos-systems-bc-product-image.png') no-repeat,
+    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAPoCAMAAADOQa8oAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RjBFQTI0RTU2MDVBMTFFOEIwNEFCMjJFMUVENzc3ODEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RjBFQTI0RTY2MDVBMTFFOEIwNEFCMjJFMUVENzc3ODEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpGMEVBMjRFMzYwNUExMUU4QjA0QUIyMkUxRUQ3Nzc4MSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpGMEVBMjRFNDYwNUExMUU4QjA0QUIyMkUxRUQ3Nzc4MSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PipUZIQAAAGtUExURafB36vK8a7O+KO40azL86vJ8K3N9qW92afB4abA3aa/3KrH7KO40qjD5a3N9avJ76jD5KO606nF56jE56W82KnG6aW92KK1zaK2z6fB4qO61KrI7a3M9aK1zKK20KS71KW/26O40KfC46zL8qG1zqW92qa+26jC5K3O9qS71arH7aa+3ae/3qfC4qS71qS40qnE5arJ7qW816a/3qK40ajF56nE5qzN9KnF5qO3z6zN9qrG6KjC46S81qrH6qK1zq3P+KnF6KS61KrG66vL8qK2zaK2zqfA4KjE5qvK8KbB36nG6KW+2qzM9azM9KzK8avI7ajC4qvH66fB4KvH6qW71qrI7q3O+K3M9KW71aW+2anG66zO963N96S916S406rH6anH7KW82avK76rF5qjB4qrF6Ke/36W+26O71KG1zaa93KS61aS92KfA4anD5KO30KfC5KO61azM86jD5qa/26S716zL9Ka/36vI76S606G0zabA3KW81qW916vJ7qS816fA3azO9qzN9arF6aO406vH7aK30KjB4azJ8K7P967O963O967P+P///94fXH0AAAJZSURBVHja7NJFjyQxEITRXGZmZmZmZmZmZmZmht+8nyIOaVk9K+1xpXqHUNhpd3X1TIxCDEGoKV4gcrAJcR1u2lNsRkxEEWvgWAYfGQqH9u6i2BuHGA2HlooO8J7aF7gp5sBtIYpBT3hPTefUFM9RDM4g+sHxCW7D4aiW6+EYg7iGuI84Bu9lO4SYBrdX8PIm3GYj5sNN8RixCo7TiNeIgYi38A0tB8ORy1so9s4jjiO6oI5JiJ1wU+RU18bCR9SuIiYjHiG6w8sbcNM5Dap4Cbd3iBkoohtaxky4LYCXiqfw3hVEZTuiTZreRmxBHIBbV3ippviKYnkJbrMQw1C0fXCMh/dWoljqcO5NgaMvohfiHuIOvKfpXHiZ57Itho8oHsKDpXDbCp+7CA/6w4MBKEKDRYjL8N4KeKCmqZbrEB8ROxBn4abBIMQGuK2G2wm4HYSXmupwD3igdg5u+1G3vYjPiBEoQgO16YjDcGg5D0Xrg3gDL5/Be4pvKJadEBfgptgGR+4p2sFRLTMmwG0jHHvg0OABfE7RES3jKOrlbsQSxBO49YYHaiPh2IWWe53hwQcUS7WMqXBbjjgF771H/IRDUw1+wNEenmr5HfELxV4e0UChc9rTNK/lIKO6pg/VoLqmj9L0CIpr+YXyafkB+TJtPi1foXrVvLYWxd1Wb97qWvUlNah+iDycLe/m5+Wy1dOqn6S69vd3a/Na9edu81r+9tXfrdXT/und/v5fkg/Xn6e6dhL1P2t1rdXT8mvkNK9Vg7z2G0000UQTTTTRRBNN/FfxR4ABAJK2leeM66s3AAAAAElFTkSuQmCC) repeat-x;
+    -webkit-background-position: center top;
+    background-position: center top;
+    padding-bottom: 50px;
+}
+.deatails_wrapper{
+    color: #fff;
+    position: relative;
+}
+.deatails_wrapper p{
+    color: #fff;
+    font-size: 1.41421rem;
+    margin-top: 15px;
+}
+.deatails_wrapper .offers {
+    padding-left: 20px;
+}
+.deatails_wrapper .item {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 10px;
+    width: 340px;
+}
+.deatails_wrapper .item .icon,
+.deatails_wrapper .item img {
+    height: 50px;
+    margin-bottom: 0;
+    margin-right: 10px;
+}
+
+.deatails_wrapper .arrowWrapper{
+    height: 52px;
+    left: 250px;
+    position: absolute;
+    top: 220px;
+    width: 144px;
+}
+
+
+.quiz_form {
+    background-color: #e2e2e2;
+    margin-bottom: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 100%;
+    float: right;
+}
+
+.quiz_form .QuestionSetWrapper {
+    margin: 0 auto;
+    max-width: 576px;
+    overflow: hidden;
+}
+
+.pageWrapper {
+    padding: 10px;
+    vertical-align: top;
+    white-space: normal;
+    width: 100%;
+    text-align: left;
+}
+
+
+
+.QuestionContainerr {
+    min-height: 400px;
+    background: ;
+}
+
+@media (min-width: 992px){
+    .quiz_form {
+        border: 3px solid black;
+        margin-top: -3px;
+        max-width: 536px;
+    }
+    .QuestionContainer {
+        min-height: 440px;
+    }
+        
+    .pageWrapper {
+        padding: 15px;
+    }
+
+}
