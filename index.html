@@ -5,11 +5,13 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link href="css/bootstrap.min.css" rel="stylesheet">
       <link href="css/stylesheet.css" rel="stylesheet">
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script src="js/bootstrap.min.js" ></script>
       <title>POS Systems Price Quotes From Qualified Sellers</title>
    </head>
    <body>
-      <div class="container-xxl">
+      <div class="container-fluid">
          <div class="row">
             <header class="px-0">
                <div class="px-3 bg_blue text-white ">
@@ -63,8 +65,8 @@
                      </div>
                   </div>
                </div>
-               <div class="px-3 border-bottom ">
-                  <div class="container d-flex flex-wrap justify-content-left">
+               <div class="px-3">
+                  <div class="container d-flex flex-wrap justify-content-left titleSection">
                      <h4 class="TitleTextWithTagLine ">
                         Compare Price Quotes for <strong>POS Systems</strong> and Save
                         <div class="TagLine ">Simplify your research by letting us do the work for you.</div>
@@ -74,101 +76,127 @@
             </header>
          </div>
       </div>
-      <div class="container-xxl main_container">
-      <div class="container">
-         <div class="row">
-            <div class="col-md-5 align-items-left">
-               <div class="deatails_wrapper">
-                  <p>Share a few details and get:</p>
-                  <div class="offers">
-                     <div class="item">
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAT+SURBVHja1JpbTBVXFIbnjAdQrNJKg/UWRdsiomlVKFZKRFrRFkjfar3FS2J6eWqaJk1NbB980wfTB6MPTRqDlhg1EUWDrb1qL9C7aL0LilqsWgsotsBh+q/wjx6PzJ45c85wzqzkCyFs9ux/z15rr732BAzD0OJkj4NZoBRMAKPBKJDKv/eAVvAnaAJHwLfgj3g8PBCjkCfAq+AlkMtBNoJzoAVcB3eAPCQNPArGUHQeBZ8HdWAH+M31SESIC/LANnAbnATvg2lAj7KfHPA2+An8C2rBbDdjivYfssBH4B8+tBQMcjkZkRRycqTv3WCSV0LKQQs4TgGaR+SDw+A6WBFvIetBF3gPBD0UEc5qcAtsBWmxCkkF28E18MIACQinAFwAh8AjqraqqBUE+8FkMJfRJRGWCQ6CIWA2aOuvka7ooIoiShIoQuwGKAO3wV4wOJrwuwG0gwkJWE5WZIBmsNOpjyww+qw0iUSYTAa94A07IVkMe2uSUITJYtADpqic/WMwB0xiWqFMb0ABcyorX7sFvmCe9Sxzr35XOLgJDoOQA7/5kj/n9pdr5YBjYB74StHJRHCJyeB5DqLTom062/4FCq0iDvOwTOZgl0E2aFaIknbHQTk4FOns1aDO5rUOZ1zP5yYly7AEpFiQCerBHZCraDcV3ABjwFhwlXmYaiybQYP5ezBslhcy1KpMltBD3GPkTfSCLtCtCJ2yDDrACUW/XezP4Jsexrekso3gFF3ha3NtL+Wr/N7B+gxF+I9u0z6FA7WboHB/CTnw0dMigGO/20EFHb3bo00t4FG/W3gWStd5uJkCdmv+s8+YukwXIcWMLKd9KER88FdQKUKeB0cZ6/1oMvaZImQ8z9h+tbOy0ercmVt8LETcYrgIeYzVDr+alJgG6dx4On0sRHK0kK753wxzQ+x2kA4ks2WIDhFylRVAv5r4uCFCroCxPhYiJdgOEXKR2a9fTc4mrSLkGzDNw8TOa5OxH9WZCmfH8FbicS9hxODo00GtCDnDs0ily/Tc7ozd5eB4EHIppIhjaAjylCcVxVXgwyhmp5eHpk94Fg9YFB8yGN4/BVkWb2MoGME+o7HXmcq3m0fd7eBdMAP87KCDILPlZYx4uiKivMUzg5w+axST8je4FsUSH8fiw8vmgMQaWV99ByyyWUqBsKPrPgcPTOMSWO5wgN1hz1HZa3SLA5HloGe0vju9mczx+zMpCjRx9tocHGMNzlwGS00BBw6fzhPrkxyo1SYof1sJdkUK0VgklrQ+X/FAKShP5XIK0E/sZlicebBNux4uMYP1shqFz+zU+u4vn743DffXirJZg1qdxCXTeaxNF9kVsZex4YwkFDGOd4wfOL3oqWLpNJf5fjJYkBFVin3PPRCFLIRIpKmjc5fRuRNpafQLKa6XMEw7EmJu/9/x9FiWwDeTypqbfFVRwCzkAVOdENtY85IrrwaGxIG28ZzMidwemq0a2h11ZUm9CH4B9WDJAIpYwGygg8upSZ12Oo8Yb4I2cJBXYF5GpmpuA2u9+oQjj0Jugk38PV4CZA9bxzv9H0Cxl9+imMwHR8B/vMxfBEa66Ec+AqgAe0An+B284mZMsX7mJHd48pnTfGa4jcypzrIC2Eo/k4c8DEZq9z5zkjTnKfbzOXOmGrcDCcTpw7MhPAJU8Odos0wTli/pFNROgSK6FvyoWd8tOrb/BRgASVdiZh1ev1cAAAAASUVORK5CYII=" class="icon">
-                        <div>A <strong>FREE</strong> Buyer’s Guide to help you make the right decision</div>
+      <div class="container-fluid main_container">
+         <div class="container">
+            <div class="row px-12">
+               <div class="col-md-5 align-items-left">
+                  <div class="deatails_wrapper">
+                     <p>Share a few details and get:</p>
+                     <div class="offers">
+                        <div class="item">
+                           <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAT+SURBVHja1JpbTBVXFIbnjAdQrNJKg/UWRdsiomlVKFZKRFrRFkjfar3FS2J6eWqaJk1NbB980wfTB6MPTRqDlhg1EUWDrb1qL9C7aL0LilqsWgsotsBh+q/wjx6PzJ45c85wzqzkCyFs9ux/z15rr732BAzD0OJkj4NZoBRMAKPBKJDKv/eAVvAnaAJHwLfgj3g8PBCjkCfAq+AlkMtBNoJzoAVcB3eAPCQNPArGUHQeBZ8HdWAH+M31SESIC/LANnAbnATvg2lAj7KfHPA2+An8C2rBbDdjivYfssBH4B8+tBQMcjkZkRRycqTv3WCSV0LKQQs4TgGaR+SDw+A6WBFvIetBF3gPBD0UEc5qcAtsBWmxCkkF28E18MIACQinAFwAh8AjqraqqBUE+8FkMJfRJRGWCQ6CIWA2aOuvka7ooIoiShIoQuwGKAO3wV4wOJrwuwG0gwkJWE5WZIBmsNOpjyww+qw0iUSYTAa94A07IVkMe2uSUITJYtADpqic/WMwB0xiWqFMb0ABcyorX7sFvmCe9Sxzr35XOLgJDoOQA7/5kj/n9pdr5YBjYB74StHJRHCJyeB5DqLTom062/4FCq0iDvOwTOZgl0E2aFaIknbHQTk4FOns1aDO5rUOZ1zP5yYly7AEpFiQCerBHZCraDcV3ABjwFhwlXmYaiybQYP5ezBslhcy1KpMltBD3GPkTfSCLtCtCJ2yDDrACUW/XezP4Jsexrekso3gFF3ha3NtL+Wr/N7B+gxF+I9u0z6FA7WboHB/CTnw0dMigGO/20EFHb3bo00t4FG/W3gWStd5uJkCdmv+s8+YukwXIcWMLKd9KER88FdQKUKeB0cZ6/1oMvaZImQ8z9h+tbOy0ercmVt8LETcYrgIeYzVDr+alJgG6dx4On0sRHK0kK753wxzQ+x2kA4ks2WIDhFylRVAv5r4uCFCroCxPhYiJdgOEXKR2a9fTc4mrSLkGzDNw8TOa5OxH9WZCmfH8FbicS9hxODo00GtCDnDs0ily/Tc7ozd5eB4EHIppIhjaAjylCcVxVXgwyhmp5eHpk94Fg9YFB8yGN4/BVkWb2MoGME+o7HXmcq3m0fd7eBdMAP87KCDILPlZYx4uiKivMUzg5w+axST8je4FsUSH8fiw8vmgMQaWV99ByyyWUqBsKPrPgcPTOMSWO5wgN1hz1HZa3SLA5HloGe0vju9mczx+zMpCjRx9tocHGMNzlwGS00BBw6fzhPrkxyo1SYof1sJdkUK0VgklrQ+X/FAKShP5XIK0E/sZlicebBNux4uMYP1shqFz+zU+u4vn743DffXirJZg1qdxCXTeaxNF9kVsZex4YwkFDGOd4wfOL3oqWLpNJf5fjJYkBFVin3PPRCFLIRIpKmjc5fRuRNpafQLKa6XMEw7EmJu/9/x9FiWwDeTypqbfFVRwCzkAVOdENtY85IrrwaGxIG28ZzMidwemq0a2h11ZUm9CH4B9WDJAIpYwGygg8upSZ12Oo8Yb4I2cJBXYF5GpmpuA2u9+oQjj0Jugk38PV4CZA9bxzv9H0Cxl9+imMwHR8B/vMxfBEa66Ec+AqgAe0An+B284mZMsX7mJHd48pnTfGa4jcypzrIC2Eo/k4c8DEZq9z5zkjTnKfbzOXOmGrcDCcTpw7MhPAJU8Odos0wTli/pFNROgSK6FvyoWd8tOrb/BRgASVdiZh1ev1cAAAAASUVORK5CYII=" class="icon">
+                           <div>A <strong>FREE</strong> Buyer’s Guide to help you make the right decision</div>
+                        </div>
+                        <div class="item">
+                           <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAGAGlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDAgNzkuMTYwNDUxLCAyMDE3LzA1LzA2LTAxOjA4OjIxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOCAoTWFjaW50b3NoKSIgeG1wOkNyZWF0ZURhdGU9IjIwMTgtMDgtMzFUMDk6MzA6MjUtMDQ6MDAiIHhtcDpNb2RpZnlEYXRlPSIyMDE4LTA4LTMxVDEyOjQ4OjU2LTA0OjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDE4LTA4LTMxVDEyOjQ4OjU2LTA0OjAwIiBkYzpmb3JtYXQ9ImltYWdlL3BuZyIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyIgcGhvdG9zaG9wOklDQ1Byb2ZpbGU9InNSR0IgSUVDNjE5NjYtMi4xIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOmM3MTExZDA5LTc0NDUtNDFjOC1iNmE0LWVlZTcxNzA4MTVlYiIgeG1wTU06RG9jdW1lbnRJRD0iYWRvYmU6ZG9jaWQ6cGhvdG9zaG9wOmE0NzAxYjE5LTdjOGMtZjQ0Mi04NGFlLTM1MmQ4NmY4YzBhYyIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOmEyYjY0MTRiLTNmNWEtNDNjNi04YzY2LTlhNmVjMzk3NzE3NyI+IDx4bXBNTTpIaXN0b3J5PiA8cmRmOlNlcT4gPHJkZjpsaSBzdEV2dDphY3Rpb249ImNyZWF0ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6YTJiNjQxNGItM2Y1YS00M2M2LThjNjYtOWE2ZWMzOTc3MTc3IiBzdEV2dDp3aGVuPSIyMDE4LTA4LTMxVDA5OjMwOjI1LTA0OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOCAoTWFjaW50b3NoKSIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6YzcxMTFkMDktNzQ0NS00MWM4LWI2YTQtZWVlNzE3MDgxNWViIiBzdEV2dDp3aGVuPSIyMDE4LTA4LTMxVDEyOjQ4OjU2LTA0OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOCAoTWFjaW50b3NoKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz69hmDMAAAFIUlEQVRo3s2aeWwVVRTGB2hpi3QDZQ2Boq0o+6rQ2EKpkeBTMCIBhMSQILH4hyH8AwFMAAMBEiCxCgFaCCJRglEkkUYBFxKVTVQKKEuwLY2CkaVsxaV8J3w3uU76OjP3zvS1yS9vZjpzZr655957zrnjNDQ0OCHxCJgOysB+cBpcA7dJHTgDvgZbwSzweFj3tzWQCxaBb8FVcAp8CJaDEjAZPAdi4EUwGywB74MfKfQHnj8oEUL6gvfATb75xaA/aB3QzqNgLjgC7oA9YFRzCOkENvHty02LQJuQ3OMJvhyxvQs8HJWQZ0E1qKQAJyKGgW/An+CVsIWsBHfBfJAUoQgdGQxucGBIsRXSFmwHl0FxMwnQGQ5+A1+AbFMh8uYraKh3AkQoOnIwEJfONBGygyJyEihC0QEcAl+B1CBCVoHroFcLEKGQ1rgAdvoVMq7h/l9RCxKh6AP+A695CenEYW+B4Y1GgqlgSiO8BLqHIGYa+Mcd3rhPKgfnQSsfBtPA8+BlGl9Kd6xpBJl//gBnOTdMo+ChhmIOkEaFSLjwNxjt09gIuuA58CuoZ2ccFYcXeH4t+IXCjloEqPX6lOAepfYGMFYALrITSgsWUtTvcbhE++p8ac2fLVzsXY5k/xPSm52oIIChp+g2D2jH0tkPurmQY11dLjse/GQhJI8tXKgLWcy+kWwgJN3wQcaC45Yd/0uwURdyiHmFYyEkA6xj5PqRDw7TC9S+5DGvB3yGKXTvdg4nvRsG2ZpbyADwLzPEUh+sYzAq228zHDptEL78BfJlZwYNJFkKkQyvyiI/GWPY+feBFbKxhc3qhCCkWotSk+lu6RoZjKgbsxcz7PxrwOdqclkeopAs7n/AOUOfGGv5BlNDFDIHnHA4OZVE0CJ9mL666Rtyi0wQl3ZYyZgcgZA0brvpyHlFkW4pRF7ORYfVi1gErrWHAagXpZZC8lSLhC1EtUg33sSLhyyF5CohdSyehS2kK2/ixYOWQqTqUuMwtJ4dgWt9xhrVlSaQ/6+3FCLXVTusxS6NoEXkeGcXPVkD0MmyFCKNcNJhdW97BELymLMMJ0M8Zn1TIVJf2C8br9JAq5Bd61PWwy6RGo9CdZGhEMlx1qrMsC5orVUT0p77A10t0o7bWfxVCZX8vgU2M8AU3gGfiIsYVFYk0yx2WEGXYO2NgEYK+OAqh3nMJSQeA5kQ7eLyQhmXFuRvdcBnGM/WzlAHVhi410je/Bhzi0rGUpke16koOVnLTmV/g4F771b9Wx3oz4cKUtXIYKF5HlnDJCfLh5Bqdvx+DJHKDfpGD+Y/MXfxYS8LEDZLb35caxCrLoVMijYb3m8Z86jWbiEjWA4aYGh4MF0k1YfgKyznlBneqwsHqEnxCnS7Wfk2Md6P7vk9ONgEx3neBovW3+kuXLhPyOEK7CwD46m8bpEHC8FMCxFP80XkexWxZ/DEIS2wiN2D8dmbfpcVtrE6mN2CRCRxSftgkPWRFObyR7jIkmgRKey/lVr+4nvFKpMXHk5wy7TV4rZepouhHViWPBPm5xYB6KmtH+bYLk+nsbRTx7WQ5hIxjiHPgXjuZPrBQAnDiQqWeqIcmXZwGvBdjzb5BqWCM3NpEzUqE3KYqUpf+I5pQuQf1TzDYbCei/lTmcoGtZPNoO9jcIvDq0mNzfozpzEMNS4wwRFRa7k8MBE8yZQ3l+lujDn2KhYnask2VgwT9r2WPiDks4ZcwUStihlklbatPsrZR8HFPvIXX9wDfJCuNxnfmKkAAAAASUVORK5CYII=" class="icon">
+                           <div>Multiple quotes to compare so you know you’re getting the best deal.</div>
+                        </div>
                      </div>
-                     <div class="item">
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAGAGlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDAgNzkuMTYwNDUxLCAyMDE3LzA1LzA2LTAxOjA4OjIxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOCAoTWFjaW50b3NoKSIgeG1wOkNyZWF0ZURhdGU9IjIwMTgtMDgtMzFUMDk6MzA6MjUtMDQ6MDAiIHhtcDpNb2RpZnlEYXRlPSIyMDE4LTA4LTMxVDEyOjQ4OjU2LTA0OjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDE4LTA4LTMxVDEyOjQ4OjU2LTA0OjAwIiBkYzpmb3JtYXQ9ImltYWdlL3BuZyIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyIgcGhvdG9zaG9wOklDQ1Byb2ZpbGU9InNSR0IgSUVDNjE5NjYtMi4xIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOmM3MTExZDA5LTc0NDUtNDFjOC1iNmE0LWVlZTcxNzA4MTVlYiIgeG1wTU06RG9jdW1lbnRJRD0iYWRvYmU6ZG9jaWQ6cGhvdG9zaG9wOmE0NzAxYjE5LTdjOGMtZjQ0Mi04NGFlLTM1MmQ4NmY4YzBhYyIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOmEyYjY0MTRiLTNmNWEtNDNjNi04YzY2LTlhNmVjMzk3NzE3NyI+IDx4bXBNTTpIaXN0b3J5PiA8cmRmOlNlcT4gPHJkZjpsaSBzdEV2dDphY3Rpb249ImNyZWF0ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6YTJiNjQxNGItM2Y1YS00M2M2LThjNjYtOWE2ZWMzOTc3MTc3IiBzdEV2dDp3aGVuPSIyMDE4LTA4LTMxVDA5OjMwOjI1LTA0OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOCAoTWFjaW50b3NoKSIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6YzcxMTFkMDktNzQ0NS00MWM4LWI2YTQtZWVlNzE3MDgxNWViIiBzdEV2dDp3aGVuPSIyMDE4LTA4LTMxVDEyOjQ4OjU2LTA0OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOCAoTWFjaW50b3NoKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz69hmDMAAAFIUlEQVRo3s2aeWwVVRTGB2hpi3QDZQ2Boq0o+6rQ2EKpkeBTMCIBhMSQILH4hyH8AwFMAAMBEiCxCgFaCCJRglEkkUYBFxKVTVQKKEuwLY2CkaVsxaV8J3w3uU76OjP3zvS1yS9vZjpzZr655957zrnjNDQ0OCHxCJgOysB+cBpcA7dJHTgDvgZbwSzweFj3tzWQCxaBb8FVcAp8CJaDEjAZPAdi4EUwGywB74MfKfQHnj8oEUL6gvfATb75xaA/aB3QzqNgLjgC7oA9YFRzCOkENvHty02LQJuQ3OMJvhyxvQs8HJWQZ0E1qKQAJyKGgW/An+CVsIWsBHfBfJAUoQgdGQxucGBIsRXSFmwHl0FxMwnQGQ5+A1+AbFMh8uYraKh3AkQoOnIwEJfONBGygyJyEihC0QEcAl+B1CBCVoHroFcLEKGQ1rgAdvoVMq7h/l9RCxKh6AP+A695CenEYW+B4Y1GgqlgSiO8BLqHIGYa+Mcd3rhPKgfnQSsfBtPA8+BlGl9Kd6xpBJl//gBnOTdMo+ChhmIOkEaFSLjwNxjt09gIuuA58CuoZ2ccFYcXeH4t+IXCjloEqPX6lOAepfYGMFYALrITSgsWUtTvcbhE++p8ac2fLVzsXY5k/xPSm52oIIChp+g2D2jH0tkPurmQY11dLjse/GQhJI8tXKgLWcy+kWwgJN3wQcaC45Yd/0uwURdyiHmFYyEkA6xj5PqRDw7TC9S+5DGvB3yGKXTvdg4nvRsG2ZpbyADwLzPEUh+sYzAq228zHDptEL78BfJlZwYNJFkKkQyvyiI/GWPY+feBFbKxhc3qhCCkWotSk+lu6RoZjKgbsxcz7PxrwOdqclkeopAs7n/AOUOfGGv5BlNDFDIHnHA4OZVE0CJ9mL666Rtyi0wQl3ZYyZgcgZA0brvpyHlFkW4pRF7ORYfVi1gErrWHAagXpZZC8lSLhC1EtUg33sSLhyyF5CohdSyehS2kK2/ixYOWQqTqUuMwtJ4dgWt9xhrVlSaQ/6+3FCLXVTusxS6NoEXkeGcXPVkD0MmyFCKNcNJhdW97BELymLMMJ0M8Zn1TIVJf2C8br9JAq5Bd61PWwy6RGo9CdZGhEMlx1qrMsC5orVUT0p77A10t0o7bWfxVCZX8vgU2M8AU3gGfiIsYVFYk0yx2WEGXYO2NgEYK+OAqh3nMJSQeA5kQ7eLyQhmXFuRvdcBnGM/WzlAHVhi410je/Bhzi0rGUpke16koOVnLTmV/g4F771b9Wx3oz4cKUtXIYKF5HlnDJCfLh5Bqdvx+DJHKDfpGD+Y/MXfxYS8LEDZLb35caxCrLoVMijYb3m8Z86jWbiEjWA4aYGh4MF0k1YfgKyznlBneqwsHqEnxCnS7Wfk2Md6P7vk9ONgEx3neBovW3+kuXLhPyOEK7CwD46m8bpEHC8FMCxFP80XkexWxZ/DEIS2wiN2D8dmbfpcVtrE6mN2CRCRxSftgkPWRFObyR7jIkmgRKey/lVr+4nvFKpMXHk5wy7TV4rZepouhHViWPBPm5xYB6KmtH+bYLk+nsbRTx7WQ5hIxjiHPgXjuZPrBQAnDiQqWeqIcmXZwGvBdjzb5BqWCM3NpEzUqE3KYqUpf+I5pQuQf1TzDYbCei/lTmcoGtZPNoO9jcIvDq0mNzfozpzEMNS4wwRFRa7k8MBE8yZQ3l+lujDn2KhYnask2VgwT9r2WPiDks4ZcwUStihlklbatPsrZR8HFPvIXX9wDfJCuNxnfmKkAAAAASUVORK5CYII=" class="icon">
-                        <div>Multiple quotes to compare so you know you’re getting the best deal.</div>
-                     </div>
-                  </div>
-                  <div class="arrowWrapper">
-                     <svg fill="#fff" viewBox="0 0 720 214">
-                        <g transform="matrix(1,0,0,1,-1317.36,-1788.08)">
-                           <g transform="matrix(4.90264,0,0,4.50782,1314.76,1784.58)">
-                              <path d="M77.881,38.768C74.834,39.048 69.641,39.523 65.509,39.557C61.134,39.593 55.81,39.461 51.626,38.984C47.835,38.551 44.049,37.839 40.41,36.691C36.3,35.394 31.148,33.645 26.969,31.204C22.665,28.69 17.634,24.265 14.586,21.606C12.406,19.704 10.275,17.044 8.681,15.247C7.41,13.815 5.863,11.695 5.018,10.822C4.642,10.434 4.113,10.129 3.611,10.013C3.109,9.897 2.426,10.023 2.007,10.125C1.67,10.208 1.32,10.366 1.095,10.627C0.87,10.889 0.75,11.33 0.656,11.695C0.561,12.061 0.527,12.443 0.529,12.821C0.532,13.224 0.519,13.707 0.672,14.111C0.885,14.672 1.322,15.562 1.804,16.185C2.932,17.642 6.014,21.187 7.441,22.855C8.404,23.979 9.337,25.133 10.37,26.193C11.915,27.777 14.459,30.451 16.706,32.357C19.207,34.478 22.338,36.983 25.374,38.919C28.411,40.854 31.572,42.662 34.927,43.972C38.298,45.288 42.375,46.152 45.598,46.815C48.453,47.401 51.361,47.75 54.268,47.947C57.637,48.175 62.566,48.187 65.808,48.182C68.446,48.179 71.115,48.075 73.719,47.921C76.296,47.769 78.875,47.589 81.436,47.261C84.233,46.902 87.596,46.402 90.499,45.767C93.322,45.15 96.117,44.384 98.852,43.452C102.297,42.277 107.606,40.272 111.166,38.721C114.263,37.371 117.376,35.723 120.211,34.145C122.933,32.63 126.27,30.486 128.176,29.255C129.373,28.482 130.645,27.46 131.648,26.759C132.485,26.175 133.769,24.914 134.192,25.055C134.616,25.195 134.215,26.752 134.188,27.6C134.152,28.745 133.973,30.797 133.977,31.924C133.98,32.742 134.025,33.639 134.211,34.366C134.387,35.048 134.64,35.783 135.097,36.285C135.554,36.788 136.308,37.144 136.954,37.381C137.593,37.616 138.29,37.746 138.969,37.708C139.796,37.663 141.025,37.552 141.911,37.108C142.797,36.664 143.755,35.946 144.286,35.042C144.817,34.139 144.907,32.822 145.1,31.688C145.393,29.959 145.78,27.015 146.049,24.67C146.326,22.257 146.581,19.702 146.762,17.211C146.953,14.574 147.12,10.968 147.2,8.846C147.255,7.391 147.431,5.648 147.243,4.48C147.089,3.528 146.804,2.435 146.067,1.837C145.33,1.238 143.941,1.02 142.821,0.886C141.436,0.72 139.443,0.853 137.754,0.842C135.311,0.825 131.079,0.75 128.159,0.786C125.516,0.819 122.259,0.984 120.235,1.06C118.827,1.113 117.345,1.136 116.013,1.244C114.75,1.346 113.33,1.474 112.242,1.705C111.294,1.907 110.189,2.184 109.485,2.631C108.842,3.039 108.343,3.788 108.018,4.384C107.719,4.935 107.577,5.586 107.541,6.205C107.504,6.824 107.585,7.5 107.8,8.1C108.02,8.717 108.403,9.47 108.863,9.903C109.319,10.331 109.953,10.562 110.564,10.697C111.409,10.884 112.81,10.953 113.937,11.023C115.201,11.101 116.744,11.142 118.148,11.166C119.768,11.193 122.129,11.187 123.652,11.187C124.863,11.186 126.102,11.167 127.285,11.161C128.439,11.156 129.655,11.154 130.748,11.156C131.778,11.158 133.581,10.864 133.839,11.174C134.097,11.483 132.884,12.472 132.294,13.013C131.164,14.05 128.597,16.155 127.06,17.392C125.757,18.441 124.41,19.435 123.073,20.439C121.682,21.484 120.168,22.656 118.715,23.66C117.294,24.644 115.609,25.673 114.355,26.468C113.307,27.132 112.257,27.836 111.19,28.429C110.138,29.014 109.048,29.531 107.952,30.027C106.465,30.701 104.007,31.765 102.267,32.47C100.698,33.105 99.054,33.729 97.514,34.256C96.033,34.764 94.533,35.215 93.025,35.636C91.397,36.09 89.285,36.608 87.745,36.982C86.43,37.3 85.117,37.634 83.786,37.875C82.142,38.172 79.863,38.585 77.881,38.768Z"></path>
+                     <div class="arrowWrapper">
+                        <svg fill="#fff" viewBox="0 0 720 214">
+                           <g transform="matrix(1,0,0,1,-1317.36,-1788.08)">
+                              <g transform="matrix(4.90264,0,0,4.50782,1314.76,1784.58)">
+                                 <path d="M77.881,38.768C74.834,39.048 69.641,39.523 65.509,39.557C61.134,39.593 55.81,39.461 51.626,38.984C47.835,38.551 44.049,37.839 40.41,36.691C36.3,35.394 31.148,33.645 26.969,31.204C22.665,28.69 17.634,24.265 14.586,21.606C12.406,19.704 10.275,17.044 8.681,15.247C7.41,13.815 5.863,11.695 5.018,10.822C4.642,10.434 4.113,10.129 3.611,10.013C3.109,9.897 2.426,10.023 2.007,10.125C1.67,10.208 1.32,10.366 1.095,10.627C0.87,10.889 0.75,11.33 0.656,11.695C0.561,12.061 0.527,12.443 0.529,12.821C0.532,13.224 0.519,13.707 0.672,14.111C0.885,14.672 1.322,15.562 1.804,16.185C2.932,17.642 6.014,21.187 7.441,22.855C8.404,23.979 9.337,25.133 10.37,26.193C11.915,27.777 14.459,30.451 16.706,32.357C19.207,34.478 22.338,36.983 25.374,38.919C28.411,40.854 31.572,42.662 34.927,43.972C38.298,45.288 42.375,46.152 45.598,46.815C48.453,47.401 51.361,47.75 54.268,47.947C57.637,48.175 62.566,48.187 65.808,48.182C68.446,48.179 71.115,48.075 73.719,47.921C76.296,47.769 78.875,47.589 81.436,47.261C84.233,46.902 87.596,46.402 90.499,45.767C93.322,45.15 96.117,44.384 98.852,43.452C102.297,42.277 107.606,40.272 111.166,38.721C114.263,37.371 117.376,35.723 120.211,34.145C122.933,32.63 126.27,30.486 128.176,29.255C129.373,28.482 130.645,27.46 131.648,26.759C132.485,26.175 133.769,24.914 134.192,25.055C134.616,25.195 134.215,26.752 134.188,27.6C134.152,28.745 133.973,30.797 133.977,31.924C133.98,32.742 134.025,33.639 134.211,34.366C134.387,35.048 134.64,35.783 135.097,36.285C135.554,36.788 136.308,37.144 136.954,37.381C137.593,37.616 138.29,37.746 138.969,37.708C139.796,37.663 141.025,37.552 141.911,37.108C142.797,36.664 143.755,35.946 144.286,35.042C144.817,34.139 144.907,32.822 145.1,31.688C145.393,29.959 145.78,27.015 146.049,24.67C146.326,22.257 146.581,19.702 146.762,17.211C146.953,14.574 147.12,10.968 147.2,8.846C147.255,7.391 147.431,5.648 147.243,4.48C147.089,3.528 146.804,2.435 146.067,1.837C145.33,1.238 143.941,1.02 142.821,0.886C141.436,0.72 139.443,0.853 137.754,0.842C135.311,0.825 131.079,0.75 128.159,0.786C125.516,0.819 122.259,0.984 120.235,1.06C118.827,1.113 117.345,1.136 116.013,1.244C114.75,1.346 113.33,1.474 112.242,1.705C111.294,1.907 110.189,2.184 109.485,2.631C108.842,3.039 108.343,3.788 108.018,4.384C107.719,4.935 107.577,5.586 107.541,6.205C107.504,6.824 107.585,7.5 107.8,8.1C108.02,8.717 108.403,9.47 108.863,9.903C109.319,10.331 109.953,10.562 110.564,10.697C111.409,10.884 112.81,10.953 113.937,11.023C115.201,11.101 116.744,11.142 118.148,11.166C119.768,11.193 122.129,11.187 123.652,11.187C124.863,11.186 126.102,11.167 127.285,11.161C128.439,11.156 129.655,11.154 130.748,11.156C131.778,11.158 133.581,10.864 133.839,11.174C134.097,11.483 132.884,12.472 132.294,13.013C131.164,14.05 128.597,16.155 127.06,17.392C125.757,18.441 124.41,19.435 123.073,20.439C121.682,21.484 120.168,22.656 118.715,23.66C117.294,24.644 115.609,25.673 114.355,26.468C113.307,27.132 112.257,27.836 111.19,28.429C110.138,29.014 109.048,29.531 107.952,30.027C106.465,30.701 104.007,31.765 102.267,32.47C100.698,33.105 99.054,33.729 97.514,34.256C96.033,34.764 94.533,35.215 93.025,35.636C91.397,36.09 89.285,36.608 87.745,36.982C86.43,37.3 85.117,37.634 83.786,37.875C82.142,38.172 79.863,38.585 77.881,38.768Z"></path>
+                              </g>
                            </g>
-                        </g>
-                     </svg>
+                        </svg>
+                     </div>
                   </div>
-               </div>
                </div>
 
                <div class="col-md-7 justify-content-right justify-content-lg-start">
-                  <form class="quiz_form">
-                     <div class="QuestionSetWrapper">
-                        <main class="QuestionContainer">
-                           <div class="pageWrapper">
-                              <div class="css-8m0e9o-QuestionGroup e602t8z1">
-                                 <div class="css-1ehuqtw-QuestionWrapper e10iyrhm4">
-                                    <div type="radio" class="css-gxgg6j-QuestionText e10iyrhm3">
-                                       Are you interested in a complete POS System or just specific components?<!-- --> 
-                                    </div>
-                                    <div class="css-zp3co2-AnswerWrapper exro4l21">
-                                       <div>
-                                          <div class="css-1dtx6kw-ToggleGroupWrap e1quehab1">
-                                             <div class="css-gi1leq-AnswerGroup e1quehab0">
-                                                <div class="css-13ass3r-ToggleWrapper e14ubme81">
-                                                   <img alt="Complete POS system" src="//www.buyerzone.com/bz-assets/answerIcons/retail/pos-systems/icons/e8580477-747f-10ca-349c-72250ed70d5d.svg" class="css-x8cau9-Icon e14ubme84">
-                                                   <div class="css-qf6bnv-ToggleInputProxy e14ubme82">
-                                                      <svg height="100%" viewBox="0 0 18 18" width="100%">
-                                                         <circle cx="9" cy="9" fill="#E6B88C" r="9"></circle>
-                                                      </svg>
-                                                   </div>
-                                                   <div class="css-hsir1r-AnswerLabel e14ubme80">Complete POS system</div>
-                                                   <input type="radio" id="e8580477-747f-10ca-349c-72250ed70d5d" name="23b1e155-75c4-1ae5-74c2-b8440a665bbe" value="" class="css-1gm44to-ToggleInput e14ubme83">
-                                                   <div class="esDataTracker" data-answer_id="e8580477-747f-10ca-349c-72250ed70d5d" data-answer_type="radio" data-event_type="questionset" data-is-selected="false" style="width:0;height:0;display:none"></div>
+                     <form class="quiz_form">
+                        <div class="QuestionSetWrapper">
+                           <main class="QuestionContainer">
+                              <div class="pageWrapper">
+                                 <div class="questionGroup" id="set_1">
+                                    <div class="questionWrapper">
+                                      <div class="questionText">Are you interested in a complete POS System or just specific components?</div>
+                                      <div class="answerWrapper">
+                                        <div>
+                                          <div class="toggleGroupWrap ">
+                                            <div class="answerGroup">
+                                              <div class="toggleWrapper">
+                                                <img alt="Complete POS system" src="https://www.buyerzone.com/bz-assets/answerIcons/retail/pos-systems/icons/e8580477-747f-10ca-349c-72250ed70d5d.svg" class="icon">
+                                                <div class="toggleInputProxy">
+                                                  <svg height="100%" viewBox="0 0 18 18" width="100%">
+                                                    <circle cx="9" cy="9" fill="#E6B88C" r="9"></circle>
+                                                  </svg>
                                                 </div>
-                                                <div class="css-13ass3r-ToggleWrapper e14ubme81">
-                                                   <img alt="Software only" src="//www.buyerzone.com/bz-assets/answerIcons/retail/pos-systems/icons/7da67941-d6f6-4d44-2382-d26a92fdd5e8.svg" class="css-x8cau9-Icon e14ubme84">
-                                                   <div class="css-qf6bnv-ToggleInputProxy e14ubme82">
-                                                      <svg height="100%" viewBox="0 0 18 18" width="100%">
-                                                         <circle cx="9" cy="9" fill="#E6B88C" r="9"></circle>
-                                                      </svg>
-                                                   </div>
-                                                   <div class="css-hsir1r-AnswerLabel e14ubme80">Software only</div>
-                                                   <input type="radio" id="7da67941-d6f6-4d44-2382-d26a92fdd5e8" name="23b1e155-75c4-1ae5-74c2-b8440a665bbe" value="" class="css-1gm44to-ToggleInput e14ubme83">
-                                                   <div class="esDataTracker" data-answer_id="7da67941-d6f6-4d44-2382-d26a92fdd5e8" data-answer_type="radio" data-event_type="questionset" data-is-selected="false" style="width:0;height:0;display:none"></div>
+                                                <div class="answerLabel">Complete POS system</div>
+                                                <input type="radio" id="" name="23b1e155-75c4-1ae5-74c2-b8440a665bbe" value="" class="css-1gm44to-ToggleInput e14ubme83">
+                                                <div class="esDataTracker" data-answer_id="e8580477-747f-10ca-349c-72250ed70d5d" data-answer_type="radio" data-event_type="questionset" data-is-selected="false" style="width:0;height:0;display:none"></div>
+                                              </div>
+                                              <div class="toggleWrapper">
+                                                <img alt="Software only" src="https://www.buyerzone.com/bz-assets/answerIcons/retail/pos-systems/icons/7da67941-d6f6-4d44-2382-d26a92fdd5e8.svg" class="icon">
+                                                <div class="toggleInputProxy">
+                                                  <svg height="100%" viewBox="0 0 18 18" width="100%">
+                                                    <circle cx="9" cy="9" fill="#E6B88C" r="9"></circle>
+                                                  </svg>
                                                 </div>
-                                                <div class="css-13ass3r-ToggleWrapper e14ubme81">
-                                                   <img alt="Hardware only" src="//www.buyerzone.com/bz-assets/answerIcons/retail/pos-systems/icons/04eed2a2-f447-fad1-580e-c908588c5df0.svg" class="css-x8cau9-Icon e14ubme84">
-                                                   <div class="css-qf6bnv-ToggleInputProxy e14ubme82">
-                                                      <svg height="100%" viewBox="0 0 18 18" width="100%">
-                                                         <circle cx="9" cy="9" fill="#E6B88C" r="9"></circle>
-                                                      </svg>
-                                                   </div>
-                                                   <div class="css-hsir1r-AnswerLabel e14ubme80">Hardware only</div>
-                                                   <input type="radio" id="04eed2a2-f447-fad1-580e-c908588c5df0" name="23b1e155-75c4-1ae5-74c2-b8440a665bbe" value="" class="css-1gm44to-ToggleInput e14ubme83">
-                                                   <div class="esDataTracker" data-answer_id="04eed2a2-f447-fad1-580e-c908588c5df0" data-answer_type="radio" data-event_type="questionset" data-is-selected="false" style="width:0;height:0;display:none"></div>
+                                                <div class="answerLabel ">Software only</div>
+                                                <input type="radio" id="7da67941-d6f6-4d44-2382-d26a92fdd5e8" name="23b1e155-75c4-1ae5-74c2-b8440a665bbe" value="" class="css-1gm44to-ToggleInput e14ubme83">
+                                                <div class="esDataTracker" data-answer_id="7da67941-d6f6-4d44-2382-d26a92fdd5e8" data-answer_type="radio" data-event_type="questionset" data-is-selected="false" style="width:0;height:0;display:none"></div>
+                                              </div>
+                                              <div class="toggleWrapper">
+                                                <img alt="Hardware only" src="https://www.buyerzone.com/bz-assets/answerIcons/retail/pos-systems/icons/04eed2a2-f447-fad1-580e-c908588c5df0.svg" class="icon">
+                                                <div class="toggleInputProxy">
+                                                  <svg height="100%" viewBox="0 0 18 18" width="100%">
+                                                    <circle cx="9" cy="9" fill="#E6B88C" r="9"></circle>
+                                                  </svg>
                                                 </div>
-                                             </div>
+                                                <div class="answerLabel">Hardware only</div>
+                                                <input type="radio" id="04eed2a2-f447-fad1-580e-c908588c5df0" name="23b1e155-75c4-1ae5-74c2-b8440a665bbe" value="" class="css-1gm44to-ToggleInput e14ubme83">
+                                                <div class="esDataTracker" data-answer_id="04eed2a2-f447-fad1-580e-c908588c5df0" data-answer_type="radio" data-event_type="questionset" data-is-selected="false" style="width:0;height:0;display:none"></div>
+                                              </div>
+                                            </div>
                                           </div>
-                                       </div>
+                                        </div>
+                                      </div>
+                                      <div class="esDataGlobal" data-question_id="23b1e155-75c4-1ae5-74c2-b8440a665bbe" style="width:0;height:0;display:none"></div>
                                     </div>
-                                    <div class="esDataGlobal" data-question_id="23b1e155-75c4-1ae5-74c2-b8440a665bbe" style="width:0;height:0;display:none"></div>
-                                 </div>
+                                  </div>
                               </div>
-                           </div>
-                        </main>
-                     </div>
-                     <div class="css-12xrz90-NavigationContainer ejws74x6"><button type="submit" class="css-1lk2bay-NextButton ejws74x4"><span class="css-cb5pvu-NextButtonLabel ejws74x3">NEXT</span><span class="css-8rjh43-NavIcon ejws74x1">▷</span></button></div>
-                     <div class="css-439ssg-NoDisplayOnSmallAndMedium eeapdbf1">
-                        <div class="css-dbn2nj-Wrapper e1yqwx5c1">
-                           <div class="css-xr4v17-CompletedBar e1yqwx5c3"></div>
+                              
+
+                           </main>
                         </div>
-                     </div>
-                     <div class="css-439ssg-NoDisplayOnSmallAndMedium eeapdbf1"></div>
-                  </form>
-               </div>
+                        <div class="navigationContainer">
+                           <button tabindex="-1" type="button" class="backButton"><span class="prevButtonLabel">Previous</span><span class="navIcon">▷</span></button>
+                           <button type="submit" class="nextButton"><span class="nextButtonLabel">NEXT</span><span class="navIcon">▷</span></button>
+                        </div>
+                        <div class="NoDisplayOnSmallAndMedium">
+                           <div class="progressContainer">
+                              <div class="css-xr4v17-CompletedBar e1yqwx5c3"></div>
+                           </div>
+                        </div>
+                        <div class="css-439ssg-NoDisplayOnSmallAndMedium eeapdbf1"></div>
+                     </form>
+               </div>   
             </div>
+         </div>
+      </div>
+      <div class="container-fluid">
+         <div class="row">
+            <footer class="footer">
+               <small>
+               <a href="" target="_blank" title="" style="height: 45px;">
+                  <img alt="BuyerZone.com, LLC BBB Business Review" src="https://seal-boston.bbb.org/seals/blue-seal-96-50-buyerzone-com-llc-87942.png" style="width: 80px;">
+               </a>
+               <div class="footerLinks ">
+                  <a href="" target="_blank" rel="noopener">About Us</a>
+                  <a href="" target="_blank" rel="noopener">Terms &amp; Conditions</a>
+                  <a href="" target="_blank" rel="noopener">Do Not Sell My Personal Information</a>
+                  <a href="" target="_blank" rel="noopener">Privacy Policy</a>
+                  <a href="" target="_blank" rel="noopener">Accessibility</a>
+               </div>
+               <a href="">Customer Care: 888-393-5000</a>
+               <div>©
+                  <!-- -->2022
+                  <!-- --> BuyerZone.com LLC. All Rights Reserved.
+               </div>
+               </small>
+            </footer>
          </div>
       </div>
    </body>
