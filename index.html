@@ -129,9 +129,9 @@
                                               <div class="toggleWrapper ">
                                                  <label class="custom_radio">
                                                    <img alt="Restaurant POS System (POSRES)" src="images/complete.svg" class="icon">                                                   
-                                                      <input type="radio" name="selec_pos" value="POSRES">
-                                                      <span class="checkmark"></span>
-                                                      <div class="answerLabel">Restaurant POS System (POSRES)</div>
+                                                   <input type="radio" id="POSRES" name="selec_pos" value="POSRES" class="firstStepRadio">
+                                                   <span class="checkmark"></span>
+                                                   <div class="answerLabel">Restaurant POS System (POSRES)</div>
                                                  </label>
                                               </div>
 
@@ -140,7 +140,7 @@
                                               <div class="toggleWrapper">
                                                 <label class="custom_radio">
                                                    <img alt="Retail POS System (POSRET)" src="images/sw.svg" class="icon">                                       
-                                                      <input type="radio" name="selec_pos" value="POSRET" class="toggleInput">
+                                                      <input type="radio" id="POSRET" name="selec_pos" value="POSRET" class="firstStepRadio" >
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel ">Retail POS System (POSRET)</div>
                                                  </label>
@@ -150,12 +150,10 @@
                                               <div class="toggleWrapper">
                                                 <label class="custom_radio">
                                                    <img alt="Credit Card Processing (CCP)" src="images/hw.svg" class="icon">
-                                                      <input type="radio" id="ccp" name="selec_pos" value="CCP" class="toggleInput">
+                                                      <input type="radio" id="CCP" name="selec_pos" value="CCP" class="firstStepRadio">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Credit Card Processing (CCP)</div>
-                                                 </label>
-
-                                                 
+                                                 </label>                                                 
                                              </div>
                                             </div>
                                           </div>
@@ -164,12 +162,11 @@
                                       <div class="esDataGlobal" data-question_id="toggleInput" style="width:0;height:0;display:none"></div>
                                     </div>
                                     <div class="navigationContainer">
-                                       <button tabindex="-1" type="button" class="backButton"><span class="prevButtonLabel">Previous</span><span class="navIcon">▷</span></button>
-                                       <button type="submit" class="nextButton"><span class="nextButtonLabel">NEXT</span><span class="navIcon">▷</span></button>
+                                       <button type="" class="nextButton" style="width: 100%;"><span class="nextButtonLabel">NEXT</span><span class="navIcon">▷</span></button>
                                     </div>
                                   </div>
 
-                                 <!-- <div class="questionGroup setTypeTwo hide" id="set_2">
+                                 <div class="questionGroup setTypeTwo hide" id="set_2" style="display:none;">
                                     <div class="questionWrapper">
                                       <div class="questionText">Are you interested in a complete POS System or just specific components?</div>
                                       <div class="answerWrapper">
@@ -273,9 +270,9 @@
                                     </div>
                                     <div class="navigationContainer">
                                        <button tabindex="-1" type="button" class="backButton"><span class="prevButtonLabel">Previous</span><span class="navIcon">▷</span></button>
-                                       <button type="submit" class="nextButton"><span class="nextButtonLabel">NEXT</span><span class="navIcon">▷</span></button>
+                                       <button type="" class="nextButton"><span class="nextButtonLabel">NEXT</span><span class="navIcon">▷</span></button>
                                     </div>
-                                  </div>-->
+                                  </div>
                               </div>
                               
 
@@ -287,7 +284,8 @@
                         </div>-->
                         <div class="NoDisplayOnSmallAndMedium">
                            <div class="progressContainer">
-                              <div class="css-xr4v17-CompletedBar e1yqwx5c3"></div>
+                              <div class="completedBar" id="" style="width:0%"></div>
+                              <div class="compleredBarText motivationMessage"></div>
                            </div>
                         </div>
                         <div class="css-439ssg-NoDisplayOnSmallAndMedium eeapdbf1"></div>
@@ -379,14 +377,37 @@ article.on{
 <script>
 
 $(function () {
-         $("input[name='radio']").click(function () {
-            if ($("#radio_Email_yes").is(":checked")) {
-               $("#div_email").show();
-            } else {
-               $("#div_email").hide();
-            }
-         });
-   });
+
+      $(".firstStepRadio").click(function () {
+         $('.toggleWrapper').removeClass('active');
+         $('.questionGroup').hide();
+
+         if ($("#POSRES").is(":checked")) {
+            $(this).parent().parent('.toggleWrapper').addClass('active');
+            $('.toggleWrapper').removeClass('active');
+            $('#set_2.questionGroup').show();
+            $('.completedBar').css("width", '15%');
+            $('.compleredBarText').html("GREAT PROGRESS! KEEP IT GOING.");
+
+         } else if($("#POSRET").is(":checked")) {
+            $(this).parent().parent('.toggleWrapper').addClass('active');
+            
+
+         } else if($("#CCP").is(":checked")) {
+            $('.toggleWrapper').removeClass('active');
+            $(this).parent().parent('.toggleWrapper').addClass('active');
+
+         }
+      });
+
+      $("#set_2 .backButton").click(function () {
+         $('.questionGroup').hide();
+         $('#set_1.questionGroup').show();
+         $('.completedBar').css("width", '0%');
+         $('.compleredBarText').html("");
+      });
+
+});
    
    //var progress = 0;
 
@@ -412,7 +433,7 @@ $(function () {
 </html>
 
 
-
+<!--
 https://www.tutorialsrack.com/articles/406/how-to-show-or-hide-div-on-radio-button-select-using-jquery-or-javascript
 
 https://stackoverflow.com/questions/21173209/show-div-when-radio-button-selected
@@ -425,4 +446,4 @@ https://codepen.io/tailofmoon/pen/vrwQex **
 
 
 
-https://docs.google.com/spreadsheets/d/1FiRgAVaECQIDNKwyKJA6HFmaWnSZhqWw/edit#gid=1290465798
+https://docs.google.com/spreadsheets/d/1FiRgAVaECQIDNKwyKJA6HFmaWnSZhqWw/edit#gid=1290465798-->

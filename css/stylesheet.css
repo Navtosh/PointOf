@@ -550,6 +550,15 @@ small {
     background: #E6DBCD;
   }
 
+
+.toggleWrapper.active {
+    background: linear-gradient(rgb(202, 184, 154), rgb(223, 204, 189)) 0px center / auto;
+}
+.completedBar {
+    background-color: rgb(87, 139, 199);
+    transition: all 0.9s ease 0s;
+    width: 0;
+}
 @media (max-width: 960px){
     .pd-0{
         padding-left: 0 !important;
@@ -736,7 +745,19 @@ small {
         padding: 0px 20px;
         width: 20%
     }
+    .backButton:hover {
+        background-color: rgb(162, 158, 146);
+    }
     
+    .motivationMessage {
+        align-self: center;
+        color: rgb(190, 210, 121);
+        display: block;
+        font-size: 15px;
+        text-align: center;
+        width: 85%;
+    }
+
     .prevButtonLabel {
         display: none;
         margin-right: 10px;
@@ -749,6 +770,11 @@ small {
     .productImage {
         display: none;
     }
+
+    .completedBar {
+        background-color: rgb(190, 210, 121);
+    }
+
 }
 
 
