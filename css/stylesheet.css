@@ -12,9 +12,38 @@ header{
     max-width: 960px;
 }
 .logo{
-    height: 34px;
-    width: 160px;
+    /* height: 34px;
+    width: 160px; */
+    margin-right: auto;
 }
+.logo p{
+    display: block;
+    margin: 0;
+    font-size: 2.1rem;
+    line-height: 30px;
+    text-align: right;
+    position: relative;
+    text-transform: uppercase;
+}
+.logo p small{
+    display: block;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 100;
+    text-transform: initial;
+}
+.logo .txtLogo{
+    height: 28px;
+    vertical-align: bottom;
+    margin: 0 2px;
+    width: auto;
+}
+.logo p sup{
+    position: absolute;
+    top: 5px;
+    font-size: 14px;
+}
+
 .logo img,
 .logo svg{
     width: 200px;
@@ -164,7 +193,7 @@ h4.TitleTextWithTagLine .TagLine{
     white-space: normal;
     width: 100%;
     text-align: left;
-    height: 500px;
+    height: auto;
     padding-bottom: 60px !important;
 }
 
@@ -236,6 +265,7 @@ h4.TitleTextWithTagLine .TagLine{
 .progressContainer {
     background-color: #939ca5;
     width: 100%;
+    position: relative;
 }
 
 
@@ -332,7 +362,16 @@ small {
     -ms-user-select: text;
     user-select: text;
 }
-
+.questionGroupForm .questionText {
+    color: rgb(70, 70, 70);
+    font-weight: 500;
+    text-align: left;
+    line-height: 22px;
+    user-select: text;
+}
+.questionGroupForm label{
+    display: block;
+}
 .answerWrapper {
     color: rgba(0,0,0,0.77);
     margin-top: 10px;
@@ -348,7 +387,12 @@ small {
     -ms-flex-direction: column;
     flex-direction: column;
 }
-
+.setTypeTwo .toggleGroupWrap {
+    align-items: flex-start;
+}
+.setTypeTwo .answerGroup {
+    width: 100%;
+}
 
 .toggleWrapper {
     border-radius: 6px;
@@ -386,7 +430,16 @@ small {
     width: 60px;
 }
 
-.toggleWrapper {
+.toggleWrapper .custom_radio .checkmark{
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 0;
+    margin-right: 15px;
+}
+
+.toggleWrapper .custom_radio .answerLabel{
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .toggleInputProxy {
@@ -399,17 +452,18 @@ small {
 .answerLabel {
     word-break: break-word;
 }
-
+/* 
 .setTypeTwo .answerGroup {
     width: 50%;
     margin-right: 10px;
-}
+} */
 .setTypeTwo .answerGroup:last-child {
     margin-right: 0px;
 }
 
 .setTypeTwo .toggleGroupWrap {
-    flex-direction: row;
+    /* flex-direction: row; */
+    flex-direction: column;
     -webkit-box-pack: center;
     justify-content: center;
 }
@@ -422,7 +476,7 @@ small {
     margin-bottom: 10px;
     padding: 5px 10px;
     overflow: hidden;
-    min-height: 50px;
+    min-height: 64px;
     line-height: 1;    
     -webkit-box-align: center;
     align-items: center;
@@ -438,7 +492,7 @@ small {
     margin-top: 0;
     padding: 4px 5px;
     display: none;
-    width: 50px;
+    width: 60px;
 }
 .setTypeTwo .toggleWrapper.active .form-control{
     display: block;
@@ -466,7 +520,7 @@ small {
     align-items: center;
     width: 100%;
     text-align: left;
-    height: 36px;
+    height: 50px;
     margin-right: 0;
     flex-direction: row;
 }
@@ -485,6 +539,26 @@ small {
 }
 .toggleInput {
     display: none;
+}
+
+
+.headline {
+    color: rgb(70, 70, 70);
+    font-size: 1.12246rem;
+    font-weight: 700;
+    text-align: left;
+    user-select: text;
+    margin-bottom: 20px;
+    line-height: 22px;
+}
+
+
+.questionGroupForm .questionWrapper {
+    margin-bottom: 10px;
+    width: 100%;
+}
+.questionGroupForm .questionWrapper:not(:last-child) {
+    margin-right: 10px;
 }
 
 .productImage {
@@ -526,7 +600,22 @@ small {
     left: 84px;
 }
 
-
+.questionGroupForm{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.textInput {
+    border-radius: 6px;
+    border: 2px solid rgb(167, 111, 37);
+    font-size: 1.12246rem;
+    padding: 10px;
+    width: 100%;
+}
 .custom_radio{
     position: relative;
 }
@@ -601,12 +690,34 @@ small {
     transition: all 0.9s ease 0s;
     width: 0;
 }
+
+.defaultErrorMessage {
+    color: red;
+    background: none;
+    border-radius: 0px;
+    font-size: 0.8909rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+
 @media (max-width: 960px){
     .pd-0{
         padding-left: 0 !important;
         padding-right: 0 !important;
     }
 }
+
+@media (max-width: 414px){
+    .logo {
+        margin-right: 0;
+    }
+    .contactPerson{
+        margin-bottom: 10px;
+    }
+}
+
+
 @media (max-width: 991px){
     .quizFormDontainer{
         width: 100%;
@@ -619,7 +730,8 @@ small {
     }
     .logo {
         height: 60px;
-        width: 200px;
+       /*  width: 200px; */
+        margin-right: auto;
     }
     .logo img, .logo svg {
         width: 200px;
@@ -656,7 +768,10 @@ small {
     .QuestionContainer {
         min-height: 440px;
     }
-
+    .setTypeTwo .answerGroup {
+        width: 50%;
+        margin-right: 10px;
+    }
     .toggleWrapper {
         width: 140px;
         height: 200px;
@@ -669,9 +784,25 @@ small {
         flex-direction: column;
         text-align: center;
     }
-        
+
+    .headline{
+        font-size: 1.12246rem;
+    }
+
+    .toggleWrapper .custom_radio .checkmark{
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 5px;
+    }
+    .setTypeTwo .custom_radio .checkmark{
+        margin-bottom: 0;
+    }
+    .setTypeTwo .toggleGroupWrap {
+        flex-direction: row;
+    }
     .pageWrapper {
         padding: 15px;
+        height: 500px;
     }
     .navigationContainer {
         background: none;
@@ -680,9 +811,7 @@ small {
         height: auto;
         position: static;
         width: auto;
-        z-index: 0;
-
-        
+        z-index: 0;        
         position: absolute;
         left: -15px;
         right: -15px;
@@ -749,6 +878,10 @@ small {
         margin-right: 0;
         margin-bottom: 5px;
     }
+    .questionWrapper {
+        overflow-y: auto;
+        height: 100%;
+    }
  
 
     .questionText {
@@ -756,6 +889,11 @@ small {
     }
     .questionContainer{
         min-height: 440px;
+    }
+
+    
+    .questionGroupForm .answerWrapper {
+        margin-top: 5px;
     }
     
     .answerWrapper {
@@ -797,7 +935,8 @@ small {
         display: block;
         font-size: 15px;
         text-align: center;
-        width: 85%;
+        position: absolute;
+        right: 6px;
     }
 
     .prevButtonLabel {
@@ -818,7 +957,6 @@ small {
     }
 
 }
-
 
 
 @media (min-width: 768px){
@@ -853,6 +991,17 @@ small {
         left: auto;
         right: 20px; 
     }
+        
+        
+    .questionGroupForm{
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+    }
+    .textInput {
+        width: 100%;
+    }
+
 }
 
 
