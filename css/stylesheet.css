@@ -988,11 +988,12 @@ small {
     .motivationMessage {
         align-self: center;
         color: rgb(190, 210, 121);
-        display: block;
+        padding-left: 10px;
+        /* display: block;
         font-size: 15px;
         text-align: center;
         position: absolute;
-        right: 6px;
+        right: 6px; */
     }
 
     .prevButtonLabel {
