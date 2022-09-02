@@ -94,7 +94,7 @@
                                               <div class="toggleWrapper ">
                                                  <label class="custom_radio">
                                                    <img alt="Restaurant POS System (POSRES)" src="images/complete.svg" class="icon">                                                   
-                                                   <input type="radio" id="POSRES" name="selec_pos" value="POSRES" class="firstStepRadio">
+                                                   <input type="radio" id="POSRES" name="selec_pos" value="POSRES" class="firstStepRadio" data-id="set_1">
                                                    <span class="checkmark"></span>
                                                    <div class="answerLabel">Restaurant POS System (POSRES)</div>
                                                  </label>
@@ -105,7 +105,7 @@
                                               <div class="toggleWrapper">
                                                 <label class="custom_radio">
                                                    <img alt="Retail POS System (POSRET)" src="images/sw.svg" class="icon">                                       
-                                                      <input type="radio" id="POSRET" name="selec_pos" value="POSRET" class="firstStepRadio" >
+                                                      <input type="radio" id="POSRET" name="selec_pos" value="POSRET" class="firstStepRadio" data-id="set_2">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel ">Retail POS System (POSRET)</div>
                                                  </label>
@@ -115,7 +115,7 @@
                                               <div class="toggleWrapper">
                                                 <label class="custom_radio">
                                                    <img alt="Credit Card Processing (CCP)" src="images/hw.svg" class="icon">
-                                                      <input type="radio" id="CCP" name="selec_pos" value="CCP" class="firstStepRadio">
+                                                      <input type="radio" id="CCP" name="selec_pos" value="CCP" class="firstStepRadio" data-id="set_3">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Credit Card Processing (CCP)</div>
                                                  </label>                                                 
@@ -141,32 +141,24 @@
                                           <div class="toggleGroupWrap ">
                                              <div class="answerGroup ">
                                                 <div class="toggleWrapper ">
-                                                   <label class="custom_checkbox">
-                                                      <input type="checkbox" id="businessTypeSelect" name="service" value="TableService" class="">
-                                                      <span class="checkmark"></span>
-                                                      <div class="answerLabel "><strong>Select All</strong></div>                                                        
-                                                    </label>   
-                                                </div>
-                                                
-                                                <div class="toggleWrapper ">
-                                                   <label class="custom_checkbox">
-                                                      <input type="checkbox" id="TableService" name="service" value="TableService" class="businessTypeSelect">
-                                                      <span class="checkmark"></span>
-                                                      <div class="answerLabel ">Table Service</div>                                                        
+                                                   <label class="custom_radio">
+                                                         <input type="radio" id="TableService" name="service" value="TableService" class="secondStepRadio">
+                                                         <span class="checkmark"></span>
+                                                         <div class="answerLabel ">Table Service</div>                                                        
                                                     </label>   
                                                 </div>
 
                                                 <div class="toggleWrapper ">
-                                                   <label class="custom_checkbox">
-                                                      <input type="checkbox" id="CounterService" name="service" value="CounterService" class="businessTypeSelect">
+                                                   <label class="custom_radio">
+                                                      <input type="radio" id="CounterService" name="service" value="CounterService" class="secondStepRadio">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Counter Service</div>                                                     
                                                    </label>   
                                                 </div>
 
                                                 <div class="toggleWrapper">
-                                                   <label class="custom_checkbox">
-                                                      <input type="checkbox" id="Delivery" name="service" value="Delivery" class="businessTypeSelect">
+                                                   <label class="custom_radio">
+                                                      <input type="radio" id="Delivery" name="service" value="Delivery" class="secondStepRadio">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Delivery</div>                                                    
                                                    </label>   
@@ -174,8 +166,8 @@
 
                                                 <div class="toggleWrapper">
                                                    
-                                                   <label class="custom_checkbox">
-                                                      <input type="checkbox" id="DriveThru" name="service" value="DriveThru" class="businessTypeSelect">
+                                                   <label class="custom_radio">
+                                                      <input type="radio" id="DriveThru" name="service" value="DriveThru" class="secondStepRadio">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Drive Thru</div>                                                  
                                                    </label>   
@@ -183,8 +175,8 @@
                                              </div>
                                              <div class="answerGroup ">
                                                 <div class="toggleWrapper">
-                                                   <label class="custom_checkbox">
-                                                      <input type="checkbox" id="GhostKitchen" name="service" value="GhostKitchen" class="businessTypeSelect">
+                                                   <label class="custom_radio">
+                                                      <input type="radio" id="GhostKitchen" name="service" value="GhostKitchen" class="secondStepRadio">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Ghost Kitchen</div>                                               
                                                    </label>   
@@ -192,8 +184,8 @@
                                                 </div>
 
                                                 <div class="toggleWrapper">
-                                                   <label class="custom_checkbox">
-                                                      <input type="checkbox" id="Cafeteria" name="service" value="Cafeteria" class="businessTypeSelect">
+                                                   <label class="custom_radio">
+                                                      <input type="radio" id="Cafeteria" name="service" value="Cafeteria" class="secondStepRadio">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Cafeteria</div>                                               
                                                    </label>   
@@ -201,8 +193,8 @@
                                                 </div>
 
                                                 <div class="toggleWrapper">
-                                                   <label class="custom_checkbox">
-                                                      <input type="checkbox" id="FoodTruck" name="service" value="FoodTruck" class="businessTypeSelect">
+                                                   <label class="custom_radio">
+                                                      <input type="radio" id="FoodTruck" name="service" value="FoodTruck" class="secondStepRadio">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Food Truck</div>                                              
                                                    </label>   
@@ -210,8 +202,8 @@
                                                 </div>
 
                                                 <div class="toggleWrapper">
-                                                   <label class="custom_checkbox">
-                                                      <input type="checkbox" id="Catering" name="service" value="Catering" class="businessTypeSelect">
+                                                   <label class="custom_radio">
+                                                      <input type="radio" id="Catering" name="service" value="Catering" class="secondStepRadio">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Catering</div>                                           
                                                    </label>   
@@ -220,6 +212,7 @@
                                           </div>
                                         </div>
                                       </div>
+                                      <div class="esDataGlobal" data-question_id="toggleInput" style="width:0;height:0;display:none"></div>
                                     </div>
                                     <div class="navigationContainer">
                                        <button tabindex="-1" type="button" class="backButton"><span class="prevButtonLabel">Previous</span><span class="navIcon">▷</span></button>
@@ -236,124 +229,115 @@
                                         <div>
                                           <div class="toggleGroupWrap ">
                                              <div class="answerGroup ">
-                                                <div class="toggleWrapper active">
-                                                   <label class="custom_checkbox">
-                                                      <input type="checkbox" id="hardwareAndSoftware" name="service" value="" class="secondStepRadio">
-                                                      <span class="checkmark"></span>
-                                                      <div class="answerLabel "><strong>Select All</strong></div>                                                        
-                                                    </label>   
-                                                </div>
-                                                
-
                                                 <div class="toggleWrapper ">
-                                                   <label class="custom_checkbox">
-                                                         <input type="checkbox" id="TableService" name="service" value="TableService" class="secondStepRadio">
+                                                   <label class="custom_radio">
+                                                         <input type="radio" id="TableService" name="service" value="TableService" class="secondStepRadio">
                                                          <span class="checkmark"></span>
                                                          <div class="answerLabel ">Mobile Order Device</div>                                                        
                                                     </label>   
-                                                    
+                                                    <input type="text" class="form-control textInput"  value="" name="" placeholder="Qty"  />
                                                 </div>
 
                                                 <div class="toggleWrapper ">
-                                                   <label class="custom_checkbox">
-                                                      <input type="checkbox" id="CounterService" name="service" value="CounterService" class="secondStepRadio">
+                                                   <label class="custom_radio">
+                                                      <input type="radio" id="CounterService" name="service" value="CounterService" class="secondStepRadio">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Kitchen Printer</div>                                                     
                                                    </label>   
-                                                   
+                                                   <input type="text" class="form-control textInput"  value="" name="" placeholder="Qty"  />
                                                 </div>
 
                                                 <div class="toggleWrapper">
-                                                   <label class="custom_checkbox">
-                                                      <input type="checkbox" id="Delivery" name="service" value="Delivery" class="secondStepRadio">
+                                                   <label class="custom_radio">
+                                                      <input type="radio" id="Delivery" name="service" value="Delivery" class="secondStepRadio">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Kitchen Display System</div>                                                    
                                                    </label>   
-                                                   
+                                                   <input type="text" class="form-control textInput"  value="" name="" placeholder="Qty"  />
                                                 </div>
 
                                                 <div class="toggleWrapper">
                                                    
-                                                   <label class="custom_checkbox">
-                                                      <input type="checkbox" id="DriveThru" name="service" value="DriveThru" class="secondStepRadio">
+                                                   <label class="custom_radio">
+                                                      <input type="radio" id="DriveThru" name="service" value="DriveThru" class="secondStepRadio">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Online Ordering</div>                                                  
                                                    </label>   
-                                                   
+                                                   <input type="text" class="form-control textInput"  value="" name="" placeholder="Qty"  />
                                                 </div>
                                                 <div class="toggleWrapper">
                                                    
-                                                   <label class="custom_checkbox">
-                                                      <input type="checkbox" id="DriveThru" name="service" value="DriveThru" class="secondStepRadio">
+                                                   <label class="custom_radio">
+                                                      <input type="radio" id="DriveThru" name="service" value="DriveThru" class="secondStepRadio">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Integrated Third Party Delivery (Grubhub, etc.)</div>                                                  
                                                    </label>   
-                                                   
+                                                   <input type="text" class="form-control textInput"  value="" name="" placeholder="Qty"  />
                                                 </div>
                                                 <div class="toggleWrapper">
                                                    
-                                                   <label class="custom_checkbox">
-                                                      <input type="checkbox" id="DriveThru" name="service" value="DriveThru" class="secondStepRadio">
+                                                   <label class="custom_radio">
+                                                      <input type="radio" id="DriveThru" name="service" value="DriveThru" class="secondStepRadio">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">QR Code Scan</div>                                                  
                                                    </label>   
-                                                   
+                                                   <input type="text" class="form-control textInput"  value="" name="" placeholder="Qty"  />
                                                 </div>
                                              </div>
                                              <div class="answerGroup ">
                                                 <div class="toggleWrapper">
-                                                   <label class="custom_checkbox">
-                                                      <input type="checkbox" id="GhostKitchen" name="service" value="GhostKitchen" class="secondStepRadio">
+                                                   <label class="custom_radio">
+                                                      <input type="radio" id="GhostKitchen" name="service" value="GhostKitchen" class="secondStepRadio">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Customer Display</div>                                               
                                                    </label>   
-                                                   
+                                                   <input type="text" class="form-control textInput"  value="" name="" placeholder="Qty"  />
                                                    
                                                 </div>
 
                                                 <div class="toggleWrapper">
-                                                   <label class="custom_checkbox">
-                                                      <input type="checkbox" id="Cafeteria" name="service" value="Cafeteria" class="secondStepRadio">
+                                                   <label class="custom_radio">
+                                                      <input type="radio" id="Cafeteria" name="service" value="Cafeteria" class="secondStepRadio">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Scale</div>                                               
                                                    </label>   
-                                                   
+                                                   <input type="text" class="form-control textInput"  value="" name="" placeholder="Qty"  />
                                                    
                                                 </div>
 
                                                 <div class="toggleWrapper">
-                                                   <label class="custom_checkbox">
-                                                      <input type="checkbox" id="FoodTruck" name="service" value="FoodTruck" class="secondStepRadio">
+                                                   <label class="custom_radio">
+                                                      <input type="radio" id="FoodTruck" name="service" value="FoodTruck" class="secondStepRadio">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Gift Cards</div>                                              
                                                    </label>   
-                                                   
+                                                   <input type="text" class="form-control textInput"  value="" name="" placeholder="Qty"  />
                                                    
                                                 </div>
 
                                                 <div class="toggleWrapper">
-                                                   <label class="custom_checkbox">
-                                                      <input type="checkbox" id="Catering" name="service" value="Catering" class="secondStepRadio">
+                                                   <label class="custom_radio">
+                                                      <input type="radio" id="Catering" name="service" value="Catering" class="secondStepRadio">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Multi-Location</div>                                           
                                                    </label>   
-                                                   
+                                                   <input type="text" class="form-control textInput"  value="" name="" placeholder="Qty"  />
                                                 </div>
                                                 <div class="toggleWrapper">
-                                                   <label class="custom_checkbox">
-                                                      <input type="checkbox" id="Catering" name="service" value="Catering" class="secondStepRadio">
+                                                   <label class="custom_radio">
+                                                      <input type="radio" id="Catering" name="service" value="Catering" class="secondStepRadio">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Inventory</div>                                           
                                                    </label>   
-                                                   
+                                                   <input type="text" class="form-control textInput"  value="" name="" placeholder="Qty"  />
                                                 </div>
                                                 <div class="toggleWrapper">
-                                                   <label class="custom_checkbox">
-                                                      <input type="checkbox" id="Catering" name="service" value="Catering" class="secondStepRadio">
+                                                   <label class="custom_radio">
+                                                      <input type="radio" id="Catering" name="service" value="Catering" class="secondStepRadio">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Marketing</div>                                           
                                                    </label>   
-                                                   
+                                                   <input type="text" class="form-control textInput"  value="" name="" placeholder="Qty"  />
                                                 </div>
                                              </div>
                                           </div>
@@ -378,32 +362,24 @@
                                           <div class="toggleGroupWrap ">
                                              <div class="answerGroup ">
                                                 <div class="toggleWrapper ">
-                                                   <label class="custom_checkbox">
-                                                      <input type="checkbox" id="retailTypeSelect" name="service" value="TableService" class="">
-                                                      <span class="checkmark"></span>
-                                                      <div class="answerLabel "><strong>Select All</strong></div>                                                        
-                                                    </label>   
-                                                </div>
-
-                                                <div class="toggleWrapper ">
-                                                   <label class="custom_checkbox">
-                                                         <input type="checkbox" id="Grocery" name="retailTypeSelect" value="Grocery" class="retailTypeSelect ">
+                                                   <label class="custom_radio">
+                                                         <input type="radio" id="TableService" name="service" value="TableService" class="secondStepRadio">
                                                          <span class="checkmark"></span>
                                                          <div class="answerLabel ">Grocery</div>                                                        
                                                     </label>   
                                                 </div>
 
                                                 <div class="toggleWrapper ">
-                                                   <label class="custom_checkbox">
-                                                      <input type="checkbox" id="Convenience" name="retailTypeSelect" value="Convenience" class="retailTypeSelect">
+                                                   <label class="custom_radio">
+                                                      <input type="radio" id="CounterService" name="service" value="CounterService" class="secondStepRadio">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Convenience</div>                                                     
                                                    </label>   
                                                 </div>
 
                                                 <div class="toggleWrapper">
-                                                   <label class="custom_checkbox">
-                                                      <input type="checkbox" id="ClothingShoe" name="retailTypeSelect" value="Clothing/Shoe" class="retailTypeSelect">
+                                                   <label class="custom_radio">
+                                                      <input type="radio" id="Delivery" name="service" value="Delivery" class="secondStepRadio">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Clothing/Shoe</div>                                                    
                                                    </label>   
@@ -411,25 +387,24 @@
 
                                                 <div class="toggleWrapper">
                                                    
-                                                   <label class="custom_checkbox">
-                                                      <input type="checkbox" id="DriveThru" name="retailTypeSelect" value="Liquor" class="retailTypeSelect">
+                                                   <label class="custom_radio">
+                                                      <input type="radio" id="DriveThru" name="service" value="DriveThru" class="secondStepRadio">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Liquor</div>                                                  
                                                    </label>   
                                                 </div>
-                                                
-                                             </div>
-                                             <div class="answerGroup ">
                                                 <div class="toggleWrapper">
-                                                   <label class="custom_checkbox">
-                                                      <input type="checkbox" id="SalonSpa" name="retailTypeSelect" value="Salon Spa" class="retailTypeSelect">
+                                                   <label class="custom_radio">
+                                                      <input type="radio" id="Catering" name="service" value="Catering" class="secondStepRadio">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Salon Spa</div>                                           
                                                    </label>   
                                                 </div>
+                                             </div>
+                                             <div class="answerGroup ">
                                                 <div class="toggleWrapper">
-                                                   <label class="custom_checkbox">
-                                                      <input type="checkbox" id="SmokeCigar" name="retailTypeSelect" value="Smoke/Cigar" class="retailTypeSelect">
+                                                   <label class="custom_radio">
+                                                      <input type="radio" id="GhostKitchen" name="service" value="GhostKitchen" class="secondStepRadio">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Smoke/Cigar</div>                                               
                                                    </label>   
@@ -437,8 +412,8 @@
                                                 </div>
 
                                                 <div class="toggleWrapper">
-                                                   <label class="custom_checkbox">
-                                                      <input type="checkbox" id="DryClean" name="retailTypeSelect" value="Dry Clean" class="retailTypeSelect">
+                                                   <label class="custom_radio">
+                                                      <input type="radio" id="Cafeteria" name="service" value="Cafeteria" class="secondStepRadio">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Dry Clean</div>                                               
                                                    </label>   
@@ -446,8 +421,8 @@
                                                 </div>
 
                                                 <div class="toggleWrapper">
-                                                   <label class="custom_checkbox">
-                                                      <input type="checkbox" id="Gift" name="retailTypeSelect" value="Gift" class="retailTypeSelect">
+                                                   <label class="custom_radio">
+                                                      <input type="radio" id="FoodTruck" name="service" value="FoodTruck" class="secondStepRadio">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Gift</div>                                              
                                                    </label>   
@@ -455,8 +430,8 @@
                                                 </div>
 
                                                 <div class="toggleWrapper">
-                                                   <label class="custom_checkbox">
-                                                      <input type="checkbox" id="Other" name="retailTypeSelect" value="Other" class="retailTypeSelect">
+                                                   <label class="custom_radio">
+                                                      <input type="radio" id="Catering" name="service" value="Catering" class="secondStepRadio">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Other</div>                                           
                                                    </label>   
@@ -473,8 +448,6 @@
                                  </div>
                                  <!--// Second Category First Label Form-->
 
-
-
                                   <!-- Second Category Second Label Form-->
                                  <div class="questionGroup setTypeTwo in out" id="set_5">
                                     <div class="questionWrapper questionWrapperTransition">
@@ -483,110 +456,101 @@
                                         <div>
                                           <div class="toggleGroupWrap ">
                                              <div class="answerGroup ">
-                                                <div class="toggleWrapper">
-                                                   <label class="custom_checkbox">
-                                                      <input type="checkbox" id="CustomerFacingDisplaySelect" name="service" value="" class="">
-                                                      <span class="checkmark"></span>
-                                                      <div class="answerLabel "><strong>Select All</strong></div>                                                        
-                                                    </label>   
-                                                </div>
-
                                                 <div class="toggleWrapper ">
-                                                   <label class="custom_checkbox">
-                                                         <input type="checkbox" id="CustomerFacingDisplay" name="additionalHardwareAndSoftware" value="Customer Facing Display" class="additionalHardwareAndSoftware">
+                                                   <label class="custom_radio">
+                                                         <input type="radio" id="TableService" name="service" value="TableService" class="secondStepRadio">
                                                          <span class="checkmark"></span>
                                                          <div class="answerLabel ">Customer Facing Display</div>                                                        
                                                     </label>   
-                                                    
+                                                    <input type="text" class="form-control textInput"  value="" name="" placeholder="Qty"  />
                                                 </div>
-                                                
 
                                                 <div class="toggleWrapper ">
-                                                   <label class="custom_checkbox">
-                                                      <input type="checkbox" id="BarCodeLabelPrinter" name="additionalHardwareAndSoftware" value="Bar Code Label Printer" class="additionalHardwareAndSoftware">
+                                                   <label class="custom_radio">
+                                                      <input type="radio" id="CounterService" name="service" value="CounterService" class="secondStepRadio">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Bar Code Label Printer</div>                                                     
                                                    </label>   
-                                                   
+                                                   <input type="text" class="form-control textInput"  value="" name="" placeholder="Qty"  />
                                                 </div>
 
                                                 <div class="toggleWrapper">
-                                                   <label class="custom_checkbox">
-                                                      <input type="checkbox" id="ProduceScale" name="additionalHardwareAndSoftware" value="Produce Scale" class="additionalHardwareAndSoftware">
+                                                   <label class="custom_radio">
+                                                      <input type="radio" id="Delivery" name="service" value="Delivery" class="secondStepRadio">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Produce Scale</div>                                                    
                                                    </label>   
-                                                   
+                                                   <input type="text" class="form-control textInput"  value="" name="" placeholder="Qty"  />
                                                 </div>
 
                                                 <div class="toggleWrapper">
                                                    
-                                                   <label class="custom_checkbox">
-                                                      <input type="checkbox" id="ScannerScale" name="additionalHardwareAndSoftware" value="Scanner/Scale (counter embedded)" class="additionalHardwareAndSoftware">
+                                                   <label class="custom_radio">
+                                                      <input type="radio" id="DriveThru" name="service" value="DriveThru" class="secondStepRadio">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Scanner/Scale (counter embedded)</div>                                                  
                                                    </label>   
-                                                   
+                                                   <input type="text" class="form-control textInput"  value="" name="" placeholder="Qty"  />
                                                 </div>
                                                 <div class="toggleWrapper">
                                                    
-                                                   <label class="custom_checkbox">
-                                                      <input type="checkbox" id="EBT" name="additionalHardwareAndSoftware" value="EBT" class="additionalHardwareAndSoftware">
+                                                   <label class="custom_radio">
+                                                      <input type="radio" id="DriveThru" name="service" value="DriveThru" class="secondStepRadio">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">EBT</div>                                                  
                                                    </label>   
-                                                   
+                                                   <input type="text" class="form-control textInput"  value="" name="" placeholder="Qty"  />
                                                 </div>
                                              </div>
                                              <div class="answerGroup ">
                                                 
                                                 <div class="toggleWrapper">
                                                    
-                                                   <label class="custom_checkbox">
-                                                      <input type="checkbox" id="GiftCards" name="additionalHardwareAndSoftware" value="Gift Cards" class="additionalHardwareAndSoftware">
+                                                   <label class="custom_radio">
+                                                      <input type="radio" id="DriveThru" name="service" value="DriveThru" class="secondStepRadio">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Gift Cards</div>                                                  
                                                    </label>   
-                                                   
+                                                   <input type="text" class="form-control textInput"  value="" name="" placeholder="Qty"  />
                                                 </div>
                                                 <div class="toggleWrapper">
-                                                   <label class="custom_checkbox">
-                                                      <input type="checkbox" id="WirelessInventoryControl" name="additionalHardwareAndSoftware" value="Wireless Inventory Control" class="additionalHardwareAndSoftware">
+                                                   <label class="custom_radio">
+                                                      <input type="radio" id="GhostKitchen" name="service" value="GhostKitchen" class="secondStepRadio">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Wireless Inventory Control</div>                                               
                                                    </label>   
-                                                   
+                                                   <input type="text" class="form-control textInput"  value="" name="" placeholder="Qty"  />
                                                    
                                                 </div>
                                                 <div class="toggleWrapper">
-                                                   <label class="custom_checkbox">
-                                                      <input type="checkbox" id="MultiLocation" name="additionalHardwareAndSoftware" value="Multi-Location" class="additionalHardwareAndSoftware">
+                                                   <label class="custom_radio">
+                                                      <input type="radio" id="Catering" name="service" value="Catering" class="secondStepRadio">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Multi-Location</div>                                           
                                                    </label>   
-                                                   
+                                                   <input type="text" class="form-control textInput"  value="" name="" placeholder="Qty"  />
                                                 </div>
                                                 <div class="toggleWrapper">
-                                                   <label class="custom_checkbox">
-                                                      <input type="checkbox" id="Inventory" name="additionalHardwareAndSoftware" value="Inventory" class="additionalHardwareAndSoftware">
+                                                   <label class="custom_radio">
+                                                      <input type="radio" id="Catering" name="service" value="Catering" class="secondStepRadio">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Inventory</div>                                           
                                                    </label>   
-                                                   
+                                                   <input type="text" class="form-control textInput"  value="" name="" placeholder="Qty"  />
                                                 </div>
                                                 <div class="toggleWrapper">
-                                                   <label class="custom_checkbox">
-                                                      <input type="checkbox" id="Marketing" name="additionalHardwareAndSoftware" value="Marketing" class="additionalHardwareAndSoftware">
+                                                   <label class="custom_radio">
+                                                      <input type="radio" id="Catering" name="service" value="Catering" class="secondStepRadio">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Marketing</div>                                           
                                                    </label>   
-                                                   
+                                                   <input type="text" class="form-control textInput"  value="" name="" placeholder="Qty"  />
                                                 </div>
                                              </div>
                                           </div>
                                         </div>
                                       </div>
-                                     
+                                      <div class="esDataGlobal" data-question_id="toggleInput" style="width:0;height:0;display:none"></div>
                                     </div>
                                     <div class="navigationContainer">
                                        <button tabindex="-1" type="button" class="backButton"><span class="prevButtonLabel">Previous</span><span class="navIcon">▷</span></button>
@@ -597,7 +561,7 @@
 
 
 
-                                 <!-- Third Category First Label Form-->
+                                  <!-- Third Category First Label Form-->
                                   <div class="questionGroup setTypeTwo in out" id="set_6" >
                                     <div class="questionWrapper questionWrapperTransition">
                                       <div class="questionText">Describe your business</div>
@@ -605,46 +569,35 @@
                                         <div>
                                           <div class="toggleGroupWrap ">
                                              <div class="answerGroup ">
-                                                <div class="toggleWrapper">
-                                                   <label class="custom_checkbox">
-                                                      <input type="checkbox" id="describeBusinessSelect" name="" value="" class="">
-                                                      <span class="checkmark"></span>
-                                                      <div class="answerLabel "><strong>Select All</strong></div>                                                        
-                                                    </label>   
-                                                </div>
-
                                                 <div class="toggleWrapper ">
-                                                   <label class="custom_checkbox">
-                                                         <input type="checkbox" id="CardPresentRestaurant" name="" value="Card Present Restaurant" class="describeBusiness">
+                                                   <label class="custom_radio">
+                                                         <input type="radio" id="TableService" name="service" value="TableService" class="secondStepRadio">
                                                          <span class="checkmark"></span>
                                                          <div class="answerLabel ">Card Present Restaurant</div>                                                        
                                                     </label>   
                                                 </div>
 
                                                 <div class="toggleWrapper ">
-                                                   <label class="custom_checkbox">
-                                                      <input type="checkbox" id="CardPresentRetail" name="describeBusiness" value="Card Present Retail" class="describeBusiness">
+                                                   <label class="custom_radio">
+                                                      <input type="radio" id="CounterService" name="service" value="CounterService" class="secondStepRadio">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Card Present Retail</div>                                                     
                                                    </label>   
                                                 </div>
 
-                                               
-
-                                             </div>
-                                             
-                                             <div class="answerGroup ">
-
                                                 <div class="toggleWrapper">
-                                                   <label class="custom_checkbox">
-                                                      <input type="checkbox" id="Services" name="describeBusiness" value="Services" class="describeBusiness">
+                                                   <label class="custom_radio">
+                                                      <input type="radio" id="Delivery" name="service" value="Delivery" class="secondStepRadio">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Services</div>                                                    
                                                    </label>   
                                                 </div>
+
+                                             </div>
+                                             <div class="answerGroup ">
                                                 <div class="toggleWrapper">
-                                                   <label class="custom_checkbox">
-                                                      <input type="checkbox" id="Online" name="describeBusiness" value="Online" class="describeBusiness">
+                                                   <label class="custom_radio">
+                                                      <input type="radio" id="GhostKitchen" name="service" value="GhostKitchen" class="secondStepRadio">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Online</div>                                               
                                                    </label>   
@@ -652,8 +605,8 @@
                                                 </div>
 
                                                 <div class="toggleWrapper">
-                                                   <label class="custom_checkbox">
-                                                      <input type="checkbox" id="describeBusinessOther" name="describeBusiness" value="Other" class="describeBusiness">
+                                                   <label class="custom_radio">
+                                                      <input type="radio" id="Cafeteria" name="service" value="Cafeteria" class="secondStepRadio">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Other</div>                                               
                                                    </label>   
@@ -677,59 +630,12 @@
                                     <div class="questionWrapper questionWrapperTransition">
                                       <div class="questionText">Do you currently accept credit cards? </div>
                                       <div class="answerWrapper">
-                                       <div>
-                                         <div class="toggleGroupWrap ">
-                                            <div class="answerGroup ">
-                                                <div class="toggleWrapper ">
-                                                  <label class="custom_radio">
-                                                     <input type="radio" id="selectbudget" name="selectbudget" value="monthly" class="secondStepRadio" checked>
-                                                     <span class="checkmark"></span>
-                                                     <div class="answerLabel">Yes</div>                                                     
-                                                  </label>   
-                                               </div>
-
-                                            </div>
-                                            <div class="answerGroup ">
-
-                                             <div class="toggleWrapper ">
-                                                <label class="custom_radio">
-                                                   <input type="radio" id="selectbudget" name="selectbudget" value="projected" class="secondStepRadio">
-                                                   <span class="checkmark"></span>
-                                                   <div class="answerLabel">No</div>                                                     
-                                                </label>   
-                                             </div>
-
-                                          </div>                                         
-                                            
-                                         </div>
-                                       </div>
-                                       <div class="">                                               
-                                          <div class="answerWrapper selectbudget " id="monthly" >
-                                             <div class="NoteText"><strong>What is your average monthly dollar volume? </strong></div>
-                                           <div>
-                                             <select class="moontlyDollarVolume">
-                                                <option value="">&nbsp;</option>
-                                                <option value="$10k or less">$10k or less</option>
-                                                <option value="between $11k and $50k">between $11k and $50k</option>
-                                                <option value="more than $50k">more than $50k</option>
-                                                <option value="">&nbsp;</option>
-                                             </select>
-                                           </div>
+                                        <div>
+                                          <div class="toggleGroupWrap ">
                                           </div>
-                                          <div class="answerWrapper selectbudget" id="projected" style="display:none;">
-                                             <div class="NoteText"><strong>What is your projected monthly dollar volume?</strong></div>
-                                           <div>
-                                             <select class="projectedDollarVolume">
-                                                <option value="">&nbsp;</option>
-                                                <option value="$10k or less">$10k or less</option>
-                                                <option value="between $11k and $50k">between $11k and $50k</option>
-                                                <option value="more than $50k">more than $50k</option>
-                                                <option value="">&nbsp;</option>
-                                             </select>
-                                           </div>                                             
-                                          </div>
-                                       </div>
-                                     </div>
+                                        </div>
+                                      </div>
+                                      <div class="esDataGlobal" data-question_id="toggleInput" style="width:0;height:0;display:none"></div>
                                     </div>
                                     <div class="navigationContainer">
                                        <button tabindex="-1" type="button" class="backButton"><span class="prevButtonLabel">Previous</span><span class="navIcon">▷</span></button>
@@ -739,104 +645,6 @@
                                  <!-- //Third Category Second Label Form-->
 
 
-
-                                <!-- Third Category Third Label Form-->
-                                   <div class="questionGroup setTypeTwo in out" id="set_8">
-                                    <div class="questionWrapper questionWrapperTransition">
-                                      <div class="questionText">How do you want to accept credit cards? </div>
-                                      <div class="answerWrapper">
-                                        <div>
-                                          <div class="toggleGroupWrap ">
-                                             <div class="answerGroup ">
-                                                <div class="toggleWrapper ">
-                                                   <label class="custom_checkbox">
-                                                      <input type="checkbox" id="AcceptCreditCardsTypeSelect" name="AcceptCreditCardsTypeSelect" value="TableService" class="">
-                                                      <span class="checkmark"></span>
-                                                      <div class="answerLabel "><strong>Select All</strong></div>                                                        
-                                                    </label>   
-                                                </div>
-
-                                                <div class="toggleWrapper ">
-                                                   <label class="custom_checkbox">
-                                                         <input type="checkbox" id="SwipeTerminal" name="AcceptCreditCardsTypeSelect" value="Swipe Terminal" class="AcceptCreditCardsTypeSelect ">
-                                                         <span class="checkmark"></span>
-                                                         <div class="answerLabel ">Swipe Terminal</div>                                                        
-                                                    </label>   
-                                                </div>
-
-                                                <div class="toggleWrapper ">
-                                                   <label class="custom_checkbox">
-                                                      <input type="checkbox" id="IntegratedwithmyPOSsoftware" name="AcceptCreditCardsTypeSelect" value="Integrated with my POS software" class="AcceptCreditCardsTypeSelect">
-                                                      <span class="checkmark"></span>
-                                                      <div class="answerLabel">Integrated with my POS software</div>                                                     
-                                                   </label>   
-                                                </div>
-
-                                                
-                                             </div>
-                                             <div class="answerGroup ">
-                                             <div class="toggleWrapper">
-                                                <label class="custom_checkbox">
-                                                   <input type="checkbox" id="Online" name="AcceptCreditCardsTypeSelect" value="Online" class="AcceptCreditCardsTypeSelect">
-                                                   <span class="checkmark"></span>
-                                                   <div class="answerLabel">Online</div>                                                    
-                                                </label>   
-                                             </div>
-
-                                             <div class="toggleWrapper">
-                                                
-                                                <label class="custom_checkbox">
-                                                   <input type="checkbox" id="Softwareonmycomputer" name="AcceptCreditCardsTypeSelect" value="Software on my computer" class="AcceptCreditCardsTypeSelect">
-                                                   <span class="checkmark"></span>
-                                                   <div class="answerLabel"> Software on my computer</div>                                                  
-                                                </label>   
-                                             </div>
-
-                                                <div class="toggleWrapper">
-                                                   <label class="custom_checkbox">
-                                                      <input type="checkbox" id="Other" name="AcceptCreditCardsTypeSelect" value="Other" class="AcceptCreditCardsTypeSelect">
-                                                      <span class="checkmark"></span>
-                                                      <div class="answerLabel">Other</div>                                           
-                                                   </label>   
-                                                </div>
-                                             </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <div class="navigationContainer">
-                                       <button tabindex="-1" type="button" class="backButton"><span class="prevButtonLabel">Previous</span><span class="navIcon">▷</span></button>
-                                       <button type="button" class="nextButton"><span class="nextButtonLabel">NEXT</span><span class="navIcon">▷</span></button>
-                                    </div>
-                                 </div>
-                                 <!-- //Third Category Third Label Form-->
-
-
-
-                                 <!-- Quantity Form-->
-                                 <div class="questionGroup setTypeTwo in out" id="set_9">
-                                    <div class="questionWrapperTransition">
-                                       <div class="headline">How many POS stations do you need? </div>
-                                       <div class="questionGroupForm">
-                                          <div class="questionWrapper">
-                                             <div class="answerWrapper ">
-                                                <div class="answerWrapper ">
-                                                <div>
-                                                   <label for="Name" type="textsingle" >
-                                                      <input autocomplete="" id="Name" name="quantity" placeholder="Quantity" type="text" class="textInput" value="">
-                                                   </label>
-                                                </div>
-                                                </div>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </div>
-                                    <div class="navigationContainer">
-                                       <button tabindex="-1" type="button" class="backButton"><span class="prevButtonLabel">Previous</span><span class="navIcon">▷</span></button>
-                                       <button type="button" class="nextButton"><span class="nextButtonLabel">NEXT</span><span class="navIcon">▷</span></button>
-                                    </div>
-                                 </div>
-                                 <!-- //Quantity Form-->
 
                                  <!-- Detail Form-->
                                   <div class="questionGroup setTypeTwo in out" id="set_10">
@@ -912,7 +720,7 @@
                                         </div>
                                      </div>
                                     <div class="navigationContainer">
-                                       <button tabindex="-1" type="button" class="backButton"><span class="prevButtonLabel">Previous</span><span class="navIcon">▷</span></button>
+                                       <button tabindex="-1" type="button" class="backButton" onclick="history.back()"><span class="prevButtonLabel">Previous</span><span class="navIcon">▷</span></button>
                                        <button type="" class="nextButton"><span class="nextButtonLabel">NEXT</span><span class="navIcon">▷</span></button>
                                     </div>
                                   </div>
@@ -922,9 +730,9 @@
 
                            </main>
                         </div>
-                       <!-- <div class="navigationContainer">
-                           <button tabindex="-1" type="button" class="backButton"><span class="prevButtonLabel">Previous</span><span class="navIcon">▷</span></button>
-                           <button type="submit" class="nextButton"><span class="nextButtonLabel">NEXT</span><span class="navIcon">▷</span></button>
+                        <!--<div class="navigationContainer">
+                           <button tabindex="-1" type="button" class="backButton" id="backButton" data-id=""><span class="prevButtonLabel">Previous</span><span class="navIcon">▷</span></button>
+                           <button type="button" class="nextButton" id="nextButton" data-id=""><span class="nextButtonLabel">NEXT</span><span class="navIcon">▷</span></button>
                         </div>-->
                         <div class="NoDisplayOnSmallAndMedium">
                            <div class="progressContainer">
@@ -1003,22 +811,22 @@ $(function () {
             $(this).parent().parent('.toggleWrapper').addClass('active');
            // $('.toggleWrapper').removeClass('active');
             $('#set_2.questionGroup').removeClass('in');
-            $('.completedBar').css("width", '20%');
-            $('.completedBar').html('20%');
+            $('.completedBar').css("width", '25%');
+            $('.completedBar').html('25%');
             $('.compleredBarText').html("GREAT PROGRESS! KEEP IT GOING.");
 
          } else if($("#POSRET").is(":checked")) {
             $(this).parent().parent('.toggleWrapper').addClass('active');
             $('#set_4.questionGroup').removeClass('in');
-            $('.completedBar').css("width", '20%');
-            $('.completedBar').html('20%');
+            $('.completedBar').css("width", '25%');
+            $('.completedBar').html('25%');
             $('.compleredBarText').html("GREAT PROGRESS! KEEP IT GOING.");
 
          } else if($("#CCP").is(":checked")) {
             $(this).parent().parent('.toggleWrapper').addClass('active');
             $('#set_6.questionGroup').removeClass('in');
-            $('.completedBar').css("width", '20%');
-            $('.completedBar').html('20%');
+            $('.completedBar').css("width", '25%');
+            $('.completedBar').html('25%');
             $('.compleredBarText').html("GREAT PROGRESS! KEEP IT GOING.");            
 
          } else {
@@ -1041,160 +849,71 @@ $(function () {
 //    //  });
 // });
 
+/*
+var $selectPOS = $('.firstStepRadio');
+$selectPOS.click(function() {
+   $(this).parent().parent('.toggleWrapper').addClass('active', this.checked);
+   var pos_data_id = $(this).data('id');
 
-$("#businessTypeSelect").click(function(){
-    $('.businessTypeSelect').not(this).prop('checked', this.checked).parent().parent('.toggleWrapper').toggleClass('active', this.checked);
-    $(this).parent().parent('.toggleWrapper').toggleClass('active', this.checked);
+   //alert(pos_data_id);
+
+   $('#backButton').attr("data-id", pos_data_id);
+   $('#nextButton').attr("data-id", pos_data_id);
+
 });
 
-$("#retailTypeSelect").click(function(){
-    $('.retailTypeSelect').not(this).prop('checked', this.checked).parent().parent('.toggleWrapper').toggleClass('active', this.checked);
-    $(this).parent().parent('.toggleWrapper').toggleClass('active', this.checked);
+$('#nextButton').on('click', function(e) {
+   var nxtbtnclicked = $('#nextButton').attr('data-id');
+   
+   alert($('#nextButton').attr('data-id'));
+   return false;
 });
+*/
 
-
-$("#AcceptCreditCardsTypeSelect").click(function(){
-    $('.AcceptCreditCardsTypeSelect ').not(this).prop('checked', this.checked).parent().parent('.toggleWrapper').toggleClass('active', this.checked);
-    $(this).parent().parent('.toggleWrapper').toggleClass('active', this.checked);
-});
-
-$("#hardwareAndSoftware").click(function(){
-    $('.secondStepRadio ').not(this).prop('checked', this.checked).parent().parent('.toggleWrapper').toggleClass('active', this.checked);
-    $(this).parent().parent('.toggleWrapper').toggleClass('active', this.checked);
-});
-
-$("#CustomerFacingDisplaySelect").click(function(){
-    $('.additionalHardwareAndSoftware ').not(this).prop('checked', this.checked).parent().parent('.toggleWrapper').toggleClass('active', this.checked);
-    $(this).parent().parent('.toggleWrapper').toggleClass('active', this.checked);
-});
-
-$("#describeBusinessSelect").click(function(){
-    $('.describeBusiness ').not(this).prop('checked', this.checked).parent().parent('.toggleWrapper').toggleClass('active', this.checked);
-    $(this).parent().parent('.toggleWrapper').toggleClass('active', this.checked);
-});
-
-
-
-var $selectService = $('.businessTypeSelect');
+var $selectService = $('.secondStepRadio');
 $selectService.click(function() {
     $selectService.each(function() {
-        $(this).parent().parent('.toggleWrapper').toggleClass('active', this.checked);       
+        $(this).parent().parent('.toggleWrapper').toggleClass('active', this.checked);
+       
     });
 });
-
-var $retailTypeSelect = $('.retailTypeSelect');
-$retailTypeSelect.click(function() {
-    $retailTypeSelect.each(function() {
-        $(this).parent().parent('.toggleWrapper').toggleClass('active', this.checked);       
-    });
-});
-
-var $AcceptCreditCardsTypeSelect = $('.AcceptCreditCardsTypeSelect');
-$AcceptCreditCardsTypeSelect.click(function() {
-    $AcceptCreditCardsTypeSelect.each(function() {
-        $(this).parent().parent('.toggleWrapper').toggleClass('active', this.checked);       
-    });
-});
-
-
-var $secondStepRadio = $('.secondStepRadio');
-$secondStepRadio.click(function() {
-    $secondStepRadio.each(function() {
-        $(this).parent().parent('.toggleWrapper').toggleClass('active', this.checked);       
-    });
-});
-
-var $CustomerFacingDisplaySelect = $('.additionalHardwareAndSoftware');
-$CustomerFacingDisplaySelect.click(function() {
-    $CustomerFacingDisplaySelect.each(function() {
-        $(this).parent().parent('.toggleWrapper').toggleClass('active', this.checked);       
-    });
-});
-
-var $describeBusinessSelect = $('.additionalHardwareAndSoftware');
-$describeBusinessSelect.click(function() {
-    $describeBusinessSelect.each(function() {
-        $(this).parent().parent('.toggleWrapper').toggleClass('active', this.checked);       
-    });
-});
-
-
-
 
        $("#set_2 .nextButton").click(function () {
-         //alert('Test');
-            $('.questionGroup').addClass('in');
-            $('#set_9.questionGroup').removeClass('in');
-            $('.completedBar').css("width", '40%');
-            $('.compleredBarText').html("ALMOST DONE! JUST A FEW MORE.");
-            $('.completedBar').html('40%');
-
-            $('#set_9 .backButton').attr("data-id", 'set_2');
-            $('#set_9 .nextButton').attr("data-id", 'set_3');
-        });
-
-
-
-      /*  $("#set_2 .nextButton").click(function () {
          //alert('Test');
             $('.questionGroup').addClass('in');
             $('#set_3.questionGroup').removeClass('in');
             $('.completedBar').css("width", '50%');
             $('.compleredBarText').html("ALMOST DONE! JUST A FEW MORE.");
             $('.completedBar').html('50%');
-        });*/
+        });
 
         $("#set_3 .nextButton").click(function () {
-         //alert('Test');
-            $('.questionGroup').addClass('in');
-            $('#set_10.questionGroup').removeClass('in');
-            $('.completedBar').css("width", '80%');
-            $('.completedBar').html('80%');
-            $('.compleredBarText').html("");
-
-            $('#set_10 .backButton').attr("data-id", 'set_3');
-            $('#set_10 .nextButton').attr("data-id", 'Success');
-        });
-
-
-        
-        $("#set_4 .nextButton").click(function () {
-         //alert('Test');
-            $('.questionGroup').addClass('in');
-            $('#set_9.questionGroup').removeClass('in');
-            $('.completedBar').css("width", '40%');
-            $('.compleredBarText').html("ALMOST DONE! JUST A FEW MORE.");
-            $('.completedBar').html('40%');
-
-            $('#set_9 .backButton').attr("data-id", 'set_4');
-            $('#set_9 .nextButton').attr("data-id", 'set_5');
-        });
-
-        $("#set_5 .nextButton").click(function () {
-         //alert('Test');
-            $('.questionGroup').addClass('in');
-            $('#set_10.questionGroup').removeClass('in');
-            $('.completedBar').css("width", '80%');
-            $('.completedBar').html('80%');
-            $('.compleredBarText').html("");
-            $('#set_10 .backButton').attr("data-id", 'set_5');
-            $('#set_10 .nextButton').attr("data-id", 'Success');
-        });
-
-
-       /*  $("#set_6 .nextButton").click(function () {
          //alert('Test');
             $('.questionGroup').addClass('in');
             $('#set_10.questionGroup').removeClass('in');
             $('.completedBar').css("width", '75%');
             $('.completedBar').html('75%');
             $('.compleredBarText').html("");
-            $('#set_10 .backButton').attr("data-id", 'set_5');
-            $('#set_10 .nextButton').attr("data-id", 'Success');
         });
-*/
 
-       $("#set_6 .nextButton").click(function () {
+        $("#set_4 .nextButton").click(function () {
+         //alert('Test');
+            $('.questionGroup').addClass('in');
+            $('#set_5.questionGroup').removeClass('in');
+            $('.completedBar').css("width", '50%');
+            $('.completedBar').html('50%');
+            $('.compleredBarText').html("");
+        });
+
+        $("#set_5 .nextButton").click(function () {
+         //alert('Test');
+            $('.questionGroup').addClass('in');
+            $('#set_10.questionGroup').removeClass('in');
+            $('.completedBar').css("width", '75%');
+            $('.completedBar').html('75%');
+            $('.compleredBarText').html("");
+        });
+        $("#set_6 .nextButton").click(function () {
          //alert('Test');
             $('.questionGroup').addClass('in');
             $('#set_7.questionGroup').removeClass('in');
@@ -1202,46 +921,14 @@ $describeBusinessSelect.click(function() {
             $('.completedBar').html('50%');
             $('.compleredBarText').html("");
         });
-
         $("#set_7 .nextButton").click(function () {
-         //alert('Test');
-            $('.questionGroup').addClass('in');
-            $('#set_8.questionGroup').removeClass('in');
-            $('.completedBar').css("width", '75%');
-            $('.completedBar').html('75%');
-            $('.compleredBarText').html("");
-        });
-
-        $("#set_8 .nextButton").click(function () {
          //alert('Test');
             $('.questionGroup').addClass('in');
             $('#set_10.questionGroup').removeClass('in');
             $('.completedBar').css("width", '75%');
             $('.completedBar').html('75%');
             $('.compleredBarText').html("");
-            $('#set_10 .backButton').attr("data-id", 'set_8');
-            $('#set_10 .nextButton').attr("data-id", 'Success');
         });
-
-        
-
-        $("#set_9 .nextButton").click(function () {      
-
-            var back_data_id = $(this).data('id');
-            var next_data_id = $(this).data('id');
-
-           // alert(next_data_id);
-           // return false;
-
-            $('.questionGroup').addClass('in');
-            // $('#set_6.questionGroup').removeClass('in');
-            $('.questionGroup#'+ back_data_id).removeClass('in');
-
-            $('.completedBar').css("width", '60%');
-            $('.completedBar').html('60%');
-            $('.compleredBarText').html("");
-         });
-
 
 
       $("#set_2 .backButton").click(function () {        
@@ -1251,21 +938,14 @@ $describeBusinessSelect.click(function() {
          $('.completedBar').html('');
          $('.compleredBarText').html("");
       });
-      
+
       $("#set_3 .backButton").click(function () {        
          $('.questionGroup').addClass('in');
-         $('#set_9.questionGroup').removeClass('in');
-         $('.completedBar').css("width", '40%');
-         $('.completedBar').html('40%');
+         $('#set_2.questionGroup').removeClass('in');
+         $('.completedBar').css("width", '25%');
+         $('.completedBar').html('25%');
          $('.compleredBarText').html("GREAT PROGRESS! KEEP IT GOING.");
       });
-     /* $("#set_3 .backButton").click(function () {        
-         $('.questionGroup').addClass('in');
-         $('#set_2.questionGroup').removeClass('in');
-         $('.completedBar').css("width", '20%');
-         $('.completedBar').html('20%');
-         $('.compleredBarText').html("GREAT PROGRESS! KEEP IT GOING.");
-      });*/
 
       $("#set_4 .backButton").click(function () {        
          $('.questionGroup').addClass('in');
@@ -1278,8 +958,8 @@ $describeBusinessSelect.click(function() {
       $("#set_5 .backButton").click(function () {        
          $('.questionGroup').addClass('in');
          $('#set_4.questionGroup').removeClass('in');
-         $('.completedBar').css("width", '40%');
-         $('.completedBar').html('40%');
+         $('.completedBar').css("width", '25%');
+         $('.completedBar').html('');
          $('.compleredBarText').html("");
       });
       $("#set_6 .backButton").click(function () {        
@@ -1292,67 +972,13 @@ $describeBusinessSelect.click(function() {
       $("#set_7 .backButton").click(function () {        
          $('.questionGroup').addClass('in');
          $('#set_6.questionGroup').removeClass('in');
-         $('.completedBar').css("width", '20%');
-         $('.completedBar').html('20%');
+         $('.completedBar').css("width", '25%');
+         $('.completedBar').html('25%');
          $('.compleredBarText').html("");
       });
 
-      $("#set_8 .backButton").click(function () {        
-         $('.questionGroup').addClass('in');
-         $('#set_7.questionGroup').removeClass('in');
-         $('.completedBar').css("width", '60%');
-         $('.completedBar').html('60%');
-         $('.compleredBarText').html("");
-      });
-
-
-      $("#set_9 .backButton").click(function () {      
-
-         var back_data_id = $(this).data('id');
-         var next_data_id = $(this).data('id');
-
-         //alert( back_data_id, back_data_id);
-         //alert();
-
-         $('.questionGroup').addClass('in');
-        // $('#set_6.questionGroup').removeClass('in');
-         $('.questionGroup#'+ back_data_id).removeClass('in');
-
-         $('.completedBar').css("width", '20%');
-         $('.completedBar').html('20%');
-         $('.compleredBarText').html("");
-      });
-
-      $("#set_10 .backButton").click(function () {      
-
-         var back_data_id = $(this).data('id');
-         var next_data_id = $(this).data('id');
-
-         //alert( back_data_id, back_data_id);
-         //alert();
-
-         $('.questionGroup').addClass('in');
-         // $('#set_6.questionGroup').removeClass('in');
-         $('.questionGroup#'+ back_data_id).removeClass('in');
-
-         $('.completedBar').css("width", '60%');
-         $('.completedBar').html('60%');
-         $('.compleredBarText').html("");
-      });
 
 });
-
-
-$(document).ready(function() {
-   $("input[name$='selectbudget']").click(function() {
-         var budgetMonth = $(this).val();
-         $("div.selectbudget").hide();
-         $("#" + budgetMonth).show();
-   });
-});
-
-
-
    
 </script>
 </html>
