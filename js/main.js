@@ -112,83 +112,160 @@ $describeBusinessSelect.click(function() {
 
 
       $("#set_2 .nextButton").click(function () {
-           $('.questionGroup').addClass('in');
-           $('#set_9.questionGroup').removeClass('in');
-           $('.completedBar').css("width", '40%');
-           $('.compleredBarText').html("ALMOST DONE! JUST A FEW MORE.");
-           $('.completedBar').html('40%');
+           
 
-           $('#set_9 .backButton').attr("data-id", 'set_2');
-           $('#set_9 .nextButton').attr("data-id", 'set_3');
+        $(".businessTypeSelect").each(function(){
+            if ($(this).prop('checked')==true){ 
+               // alert('OK');
+                $('.questionGroup').addClass('in');
+                $('#set_9.questionGroup').removeClass('in');
+                $('.completedBar').css("width", '40%');
+                $('.compleredBarText').html("ALMOST DONE! JUST A FEW MORE.");
+                $('.completedBar').html('40%');
+
+                $('#set_9 .backButton').attr("data-id", 'set_2');
+                $('#set_9 .nextButton').attr("data-id", 'set_3');
+                $("#error1").html("");
+                return false;
+            } else {
+                $("#error1").html("Please provide an answer (don't worry, it's not set in stone).");
+            }
+        });
+           
        });
 
 
        $("#set_3 .nextButton").click(function () {
-           $('.questionGroup').addClass('in');
-           $('#set_10.questionGroup').removeClass('in');
-           $('.completedBar').css("width", '80%');
-           $('.completedBar').html('80%');
-           $('.compleredBarText').html("");
 
-           $('#set_10 .backButton').attr("data-id", 'set_3');
-           $('#set_10 .nextButton').attr("data-id", 'Success');
+        $(".secondStepRadio").each(function(){
+            if ($(this).prop('checked')==true){ 
+               // alert('OK');
+               $('.questionGroup').addClass('in');
+               $('#set_10.questionGroup').removeClass('in');
+               $('.completedBar').css("width", '80%');
+               $('.completedBar').html('80%');
+               $('.compleredBarText').html("");
+    
+               $('#set_10 .backButton').attr("data-id", 'set_3');
+               $('#set_10 .nextButton').attr("data-id", 'Success');
+                $("#error3").html("");
+                return false;
+            } else {
+                $("#error3").html("Please provide an answer (don't worry, it's not set in stone).");
+            }
+        });
+
+
+          
        });
 
 
        
-       $("#set_4 .nextButton").click(function () {
-           $('.questionGroup').addClass('in');
-           $('#set_9.questionGroup').removeClass('in');
-           $('.completedBar').css("width", '40%');
-           $('.compleredBarText').html("ALMOST DONE! JUST A FEW MORE.");
-           $('.completedBar').html('40%');
 
-           $('#set_9 .backButton').attr("data-id", 'set_4');
-           $('#set_9 .nextButton').attr("data-id", 'set_5');
+       $("#set_4 .nextButton").click(function () {
+        $(".retailTypeSelect").each(function(){
+            if ($(this).prop('checked')==true){ 
+               // alert('OK');
+               $('.questionGroup').addClass('in');
+                $('#set_9.questionGroup').removeClass('in');
+                $('.completedBar').css("width", '40%');
+                $('.compleredBarText').html("ALMOST DONE! JUST A FEW MORE.");
+                $('.completedBar').html('40%');
+
+                $('#set_9 .backButton').attr("data-id", 'set_4');
+                $('#set_9 .nextButton').attr("data-id", 'set_5');
+                $("#error4").html("");
+                return false;
+            } else {
+                $("#error4").html("Please provide an answer (don't worry, it's not set in stone).");
+            }
+        });
+           
        });
 
        $("#set_5 .nextButton").click(function () {
-           $('.questionGroup').addClass('in');
-           $('#set_10.questionGroup').removeClass('in');
-           $('.completedBar').css("width", '80%');
-           $('.completedBar').html('80%');
-           $('.compleredBarText').html("");
-           $('#set_10 .backButton').attr("data-id", 'set_5');
-           $('#set_10 .nextButton').attr("data-id", 'Success');
+            $(".additionalHardwareAndSoftware").each(function(){
+                if ($(this).prop('checked')==true){ 
+                    $('.questionGroup').addClass('in');
+                    $('#set_10.questionGroup').removeClass('in');
+                    $('.completedBar').css("width", '80%');
+                    $('.completedBar').html('80%');
+                    $('.compleredBarText').html("");
+                    $('#set_10 .backButton').attr("data-id", 'set_5');
+                    $('#set_10 .nextButton').attr("data-id", 'Success');
+                    $("#error5").html("");
+                    return false;
+                } else {
+                    $("#error5").html("Please provide an answer (don't worry, it's not set in stone).");
+                }
+            });
+           
        });
 
 
       $("#set_6 .nextButton").click(function () {
-           $('.questionGroup').addClass('in');
-           $('#set_7.questionGroup').removeClass('in');
-           $('.completedBar').css("width", '40%');
-           $('.completedBar').html('40%');
-           $('.compleredBarText').html("ALMOST DONE! JUST A FEW MORE.");
+        $(".describeBusiness").each(function(){
+            if ($(this).prop('checked')==true){ 
+                $('.questionGroup').addClass('in');
+                $('#set_7.questionGroup').removeClass('in');
+                $('.completedBar').css("width", '40%');
+                $('.completedBar').html('40%');
+                $('.compleredBarText').html("ALMOST DONE! JUST A FEW MORE.");
+                $("#error6").html("");
+                return false;
+            } else {
+                $("#error6").html("Please provide an answer (don't worry, it's not set in stone).");
+            }
+        });
+
+          
        });
 
        $("#set_7 .nextButton").click(function () {
+
+        if ($('#moontlyDollarVolume option:selected').val() == '' && $('#projectedDollarVolume option:selected').val() == '') {
+            $("#error7").html("Please provide an answer (don't worry, it's not set in stone).");
+        } else {
            $('.questionGroup').addClass('in');
            $('#set_8.questionGroup').removeClass('in');
            $('.completedBar').css("width", '60%');
            $('.completedBar').html('60%');
            $('.compleredBarText').html("");
+           $("#error7").html("");
+        }
        });
 
+
+       
        $("#set_8 .nextButton").click(function () {
-           $('.questionGroup').addClass('in');
-           $('#set_10.questionGroup').removeClass('in');
-           $('.completedBar').css("width", '80%');
-           $('.completedBar').html('80%');
-           $('.compleredBarText').html("");
-           $('#set_10 .backButton').attr("data-id", 'set_8');
-           $('#set_10 .nextButton').attr("data-id", 'Success');
+        $(".AcceptCreditCardsTypeSelect").each(function(){
+            if ($(this).prop('checked')==true){ 
+                $('.questionGroup').addClass('in');
+                $('#set_10.questionGroup').removeClass('in');
+                $('.completedBar').css("width", '80%');
+                $('.completedBar').html('80%');
+                $('.compleredBarText').html("");
+                $('#set_10 .backButton').attr("data-id", 'set_8');
+                $('#set_10 .nextButton').attr("data-id", 'Success');
+                $("#error8").html("");
+                return false;
+            } else {
+                $("#error8").html("Please provide an answer (don't worry, it's not set in stone).");
+            }
+        });
+
+          
        });
 
        
 
        $("#set_9 .nextButton").click(function () {      
-
-           var back_data_id = $(this).data('id');
+        //var qtyVal = 
+        if ($("#quantity").val() == "") {
+            //alert("Please enter Name!");
+            $("#error9").html("Please provide an answer (don't worry, it's not set in stone).");
+        } else {
+            var back_data_id = $(this).data('id');
            var next_data_id = $(this).data('id');
            $('.questionGroup').addClass('in');
            $('.questionGroup#'+ back_data_id).removeClass('in');
@@ -196,6 +273,10 @@ $describeBusinessSelect.click(function() {
            $('.completedBar').css("width", '60%');
            $('.completedBar').html('60%');
            $('.compleredBarText').html("");
+            $("#error9").html("");
+        }
+
+           
         });
 
 
@@ -255,9 +336,9 @@ $describeBusinessSelect.click(function() {
      $("#set_8 .backButton").click(function () {        
         $('.questionGroup').addClass('in');
         $('#set_7.questionGroup').removeClass('in');
-        $('.completedBar').css("width", '60%');
-        $('.completedBar').html('60%');
-        $('.compleredBarText').html("");
+        $('.completedBar').css("width", '40%');
+        $('.completedBar').html('40%');
+        $('.compleredBarText').html("ALMOST DONE! JUST A FEW MORE.");
      });
 
 
@@ -297,7 +378,15 @@ $(document).ready(function() {
         $("#" + budgetMonth).show();
   });
 
-  
+  $("#set_1 .nextButton").click(function() {
+             
+    var atLeastOneChecked = false;
+    $(".firstStepRadio").each(function() {
+        if ($(this).attr("checked") != "checked") {
+            $("#msg").html("Please provide an answer (don't worry, it's not set in stone).");
+        }
+    });
+});
 });
 
 

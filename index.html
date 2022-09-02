@@ -238,6 +238,7 @@
                                       <div class="questionText">What additional hardware and software do you need? </div>
                                       <div class="answerWrapper">
                                         <div>
+                                          <div class="defaultErrorMessage" id="error3"></div>
                                           <div class="toggleGroupWrap ">
                                              <div class="answerGroup ">
                                                 <div class="toggleWrapper active">
@@ -380,6 +381,7 @@
                                       <div class="questionText">Describe your retail business</div>
                                       <div class="answerWrapper">
                                         <div>
+                                          <div class="defaultErrorMessage" id="error4"></div>
                                           <div class="toggleGroupWrap ">
                                              <div class="answerGroup ">
                                                 <div class="toggleWrapper ">
@@ -486,6 +488,7 @@
                                       <div class="questionText">What additional hardware and software do you need? </div>
                                       <div class="answerWrapper">
                                         <div>
+                                          <div class="defaultErrorMessage" id="error5"></div>
                                           <div class="toggleGroupWrap ">
                                              <div class="answerGroup ">
                                                 <div class="toggleWrapper">
@@ -609,6 +612,7 @@
                                       <div class="questionText">Describe your business</div>
                                       <div class="answerWrapper">
                                         <div>
+                                          <div class="defaultErrorMessage" id="error6"></div>
                                           <div class="toggleGroupWrap ">
                                              <div class="answerGroup ">
                                                 <div class="toggleWrapper">
@@ -689,7 +693,7 @@
                                             <div class="answerGroup ">
                                                 <div class="toggleWrapper ">
                                                   <label class="custom_radio">
-                                                     <input type="radio" id="selectbudget" name="selectbudget" value="monthly" class="secondStepRadio" checked>
+                                                     <input type="radio" id="selectbudget" name="selectbudget" value="monthly" class="" checked>
                                                      <span class="checkmark"></span>
                                                      <div class="answerLabel">Yes</div>                                                     
                                                   </label>   
@@ -700,7 +704,7 @@
 
                                              <div class="toggleWrapper ">
                                                 <label class="custom_radio">
-                                                   <input type="radio" id="selectbudget" name="selectbudget" value="projected" class="secondStepRadio">
+                                                   <input type="radio" id="selectbudget" name="selectbudget" value="projected" class="">
                                                    <span class="checkmark"></span>
                                                    <div class="answerLabel">No</div>                                                     
                                                 </label>   
@@ -710,11 +714,12 @@
                                             
                                          </div>
                                        </div>
-                                       <div class="">                                               
+                                       <div class="">  
+                                          <div class="defaultErrorMessage" id="error7"></div>                                            
                                           <div class="answerWrapper selectbudget " id="monthly" >
                                              <div class="NoteText"><strong>What is your average monthly dollar volume? </strong></div>
                                            <div>
-                                             <select class="moontlyDollarVolume">
+                                             <select class="moontlyDollarVolume" name="moontlyDollarVolume" id="moontlyDollarVolume">
                                                 <option value="">&nbsp;</option>
                                                 <option value="$10k or less">$10k or less</option>
                                                 <option value="between $11k and $50k">between $11k and $50k</option>
@@ -726,7 +731,7 @@
                                           <div class="answerWrapper selectbudget" id="projected" style="display:none;">
                                              <div class="NoteText"><strong>What is your projected monthly dollar volume?</strong></div>
                                            <div>
-                                             <select class="projectedDollarVolume">
+                                             <select class="projectedDollarVolume" name="projectedDollarVolume" id="projectedDollarVolume">
                                                 <option value="">&nbsp;</option>
                                                 <option value="$10k or less">$10k or less</option>
                                                 <option value="between $11k and $50k">between $11k and $50k</option>
@@ -754,6 +759,7 @@
                                       <div class="questionText">How do you want to accept credit cards? </div>
                                       <div class="answerWrapper">
                                         <div>
+                                          <div class="defaultErrorMessage" id="error8"></div>
                                           <div class="toggleGroupWrap ">
                                              <div class="answerGroup ">
                                                 <div class="toggleWrapper ">
@@ -829,10 +835,11 @@
                                        <div class="questionGroupForm">
                                           <div class="questionWrapper">
                                              <div class="answerWrapper ">
+                                                <div class="defaultErrorMessage" id="error9"></div>
                                                 <div class="answerWrapper ">
                                                 <div>
                                                    <label for="Name" type="textsingle" >
-                                                      <input autocomplete="" id="Name" name="quantity" placeholder="Quantity" type="text" class="textInput" value="">
+                                                      <input autocomplete="" id="quantity" name="quantity" placeholder="Quantity" type="text" class="textInput" value="">
                                                    </label>
                                                 </div>
                                                 </div>
