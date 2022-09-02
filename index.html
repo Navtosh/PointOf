@@ -8,6 +8,7 @@
 
       <script src="js/jquery.min.js"></script>
       <script src="js/bootstrap.min.js" ></script>
+      <script src="js/main.js"></script>
       <title>POS Systems Price Quotes From Qualified Sellers</title>
    </head>
    <body>
@@ -86,7 +87,7 @@
                                       <div class="questionText">Are you interested in a complete POS System or just specific components?</div>
                                       <div class="answerWrapper">
                                         <div>
-                                          <div class="defaultErrorMessage"></div>
+                                          <div class="defaultErrorMessage" id="msg"></div>
                                           <div class="toggleGroupWrap ">
                                             <div class="answerGroup">
 
@@ -135,9 +136,11 @@
                                  <!-- First Category First Label Form-->
                                  <div class="questionGroup setTypeTwo in out" id="set_2">
                                     <div class="questionWrapper questionWrapperTransition">
+                                       
                                       <div class="questionText">Describe your restaurant business</div>
                                       <div class="answerWrapper">
                                         <div>
+                                          <div class="defaultErrorMessage" id="error1"></div>
                                           <div class="toggleGroupWrap ">
                                              <div class="answerGroup ">
                                                 <div class="toggleWrapper ">
@@ -231,6 +234,7 @@
                                  <!-- First Category Second Label Form-->
                                  <div class="questionGroup setTypeTwo in out" id="set_3">
                                     <div class="questionWrapper questionWrapperTransition">
+                                
                                       <div class="questionText">What additional hardware and software do you need? </div>
                                       <div class="answerWrapper">
                                         <div>
@@ -372,6 +376,7 @@
                                  <!-- Second Category First Label Form-->
                                  <div class="questionGroup setTypeTwo in out" id="set_4">
                                     <div class="questionWrapper questionWrapperTransition">
+                                    
                                       <div class="questionText">Describe your retail business</div>
                                       <div class="answerWrapper">
                                         <div>
@@ -474,10 +479,10 @@
                                  <!--// Second Category First Label Form-->
 
 
-
                                   <!-- Second Category Second Label Form-->
                                  <div class="questionGroup setTypeTwo in out" id="set_5">
                                     <div class="questionWrapper questionWrapperTransition">
+                                    
                                       <div class="questionText">What additional hardware and software do you need? </div>
                                       <div class="answerWrapper">
                                         <div>
@@ -600,6 +605,7 @@
                                  <!-- Third Category First Label Form-->
                                   <div class="questionGroup setTypeTwo in out" id="set_6" >
                                     <div class="questionWrapper questionWrapperTransition">
+                                      
                                       <div class="questionText">Describe your business</div>
                                       <div class="answerWrapper">
                                         <div>
@@ -675,6 +681,7 @@
                                   <!-- Third Category Second Label Form-->
                                  <div class="questionGroup setTypeTwo in out" id="set_7" >
                                     <div class="questionWrapper questionWrapperTransition">
+                                       
                                       <div class="questionText">Do you currently accept credit cards? </div>
                                       <div class="answerWrapper">
                                        <div>
@@ -743,6 +750,7 @@
                                 <!-- Third Category Third Label Form-->
                                    <div class="questionGroup setTypeTwo in out" id="set_8">
                                     <div class="questionWrapper questionWrapperTransition">
+                                   
                                       <div class="questionText">How do you want to accept credit cards? </div>
                                       <div class="answerWrapper">
                                         <div>
@@ -815,6 +823,7 @@
 
                                  <!-- Quantity Form-->
                                  <div class="questionGroup setTypeTwo in out" id="set_9">
+                                    
                                     <div class="questionWrapperTransition">
                                        <div class="headline">How many POS stations do you need? </div>
                                        <div class="questionGroupForm">
@@ -841,6 +850,7 @@
                                  <!-- Detail Form-->
                                   <div class="questionGroup setTypeTwo in out" id="set_10">
                                     <div class="questionWrapperTransition">
+                                  
                                        <div class="headline">Let's finish up! Who do we have the pleasure of working with?</div>
                                        <div class="questionGroupForm">
                                          <div class="questionWrapper">
@@ -982,7 +992,7 @@
                <a href="">Customer Care: 888-393-5000</a>
                <div>©
                   <!-- -->2022
-                  <!-- --> BuyerZone.com LLC. All Rights Reserved.
+                  <!-- --> BuyerZoneclone.com LLC. All Rights Reserved.
                </div>
                </small>
             </footer>
@@ -990,369 +1000,4 @@
       </div>
 
    </body>
-
-<script type="text/javascript">
-
-$(function () {
-
-     $(".firstStepRadio").click(function () {
-         $('.toggleWrapper').removeClass('active');
-         $('.questionGroup').addClass('in');
-
-         if ($("#POSRES").is(":checked")) {
-            $(this).parent().parent('.toggleWrapper').addClass('active');
-           // $('.toggleWrapper').removeClass('active');
-            $('#set_2.questionGroup').removeClass('in');
-            $('.completedBar').css("width", '20%');
-            $('.completedBar').html('20%');
-            $('.compleredBarText').html("GREAT PROGRESS! KEEP IT GOING.");
-
-         } else if($("#POSRET").is(":checked")) {
-            $(this).parent().parent('.toggleWrapper').addClass('active');
-            $('#set_4.questionGroup').removeClass('in');
-            $('.completedBar').css("width", '20%');
-            $('.completedBar').html('20%');
-            $('.compleredBarText').html("GREAT PROGRESS! KEEP IT GOING.");
-
-         } else if($("#CCP").is(":checked")) {
-            $(this).parent().parent('.toggleWrapper').addClass('active');
-            $('#set_6.questionGroup').removeClass('in');
-            $('.completedBar').css("width", '20%');
-            $('.completedBar').html('20%');
-            $('.compleredBarText').html("GREAT PROGRESS! KEEP IT GOING.");            
-
-         } else {
-            $('#set_1.questionGroup').removeClass('in');
-         }
-      });
-
-// var $selectPos = $('.firstStepRadio');
-// $selectPos.click(function() {
-//    $('.questionGroup').addClass('in');
-//    var inputValue = $(this).attr("value");
-//                     var targetBox = $("." + inputValue);
-//                     $(".selectt").not(targetBox).addClass('in');
-//                     $(targetBox).removeClass('in');
-//                     alert("Radio button " + inputValue + " is selected");
-//    //  $selectPos.each(function() {
-//    //      $(this).parent().parent('.toggleWrapper').toggleClass('active', this.checked);
-        
-
-//    //  });
-// });
-
-
-$("#businessTypeSelect").click(function(){
-    $('.businessTypeSelect').not(this).prop('checked', this.checked).parent().parent('.toggleWrapper').toggleClass('active', this.checked);
-    $(this).parent().parent('.toggleWrapper').toggleClass('active', this.checked);
-});
-
-$("#retailTypeSelect").click(function(){
-    $('.retailTypeSelect').not(this).prop('checked', this.checked).parent().parent('.toggleWrapper').toggleClass('active', this.checked);
-    $(this).parent().parent('.toggleWrapper').toggleClass('active', this.checked);
-});
-
-
-$("#AcceptCreditCardsTypeSelect").click(function(){
-    $('.AcceptCreditCardsTypeSelect ').not(this).prop('checked', this.checked).parent().parent('.toggleWrapper').toggleClass('active', this.checked);
-    $(this).parent().parent('.toggleWrapper').toggleClass('active', this.checked);
-});
-
-$("#hardwareAndSoftware").click(function(){
-    $('.secondStepRadio ').not(this).prop('checked', this.checked).parent().parent('.toggleWrapper').toggleClass('active', this.checked);
-    $(this).parent().parent('.toggleWrapper').toggleClass('active', this.checked);
-});
-
-$("#CustomerFacingDisplaySelect").click(function(){
-    $('.additionalHardwareAndSoftware ').not(this).prop('checked', this.checked).parent().parent('.toggleWrapper').toggleClass('active', this.checked);
-    $(this).parent().parent('.toggleWrapper').toggleClass('active', this.checked);
-});
-
-$("#describeBusinessSelect").click(function(){
-    $('.describeBusiness ').not(this).prop('checked', this.checked).parent().parent('.toggleWrapper').toggleClass('active', this.checked);
-    $(this).parent().parent('.toggleWrapper').toggleClass('active', this.checked);
-});
-
-
-
-var $selectService = $('.businessTypeSelect');
-$selectService.click(function() {
-    $selectService.each(function() {
-        $(this).parent().parent('.toggleWrapper').toggleClass('active', this.checked);       
-    });
-});
-
-var $retailTypeSelect = $('.retailTypeSelect');
-$retailTypeSelect.click(function() {
-    $retailTypeSelect.each(function() {
-        $(this).parent().parent('.toggleWrapper').toggleClass('active', this.checked);       
-    });
-});
-
-var $AcceptCreditCardsTypeSelect = $('.AcceptCreditCardsTypeSelect');
-$AcceptCreditCardsTypeSelect.click(function() {
-    $AcceptCreditCardsTypeSelect.each(function() {
-        $(this).parent().parent('.toggleWrapper').toggleClass('active', this.checked);       
-    });
-});
-
-
-var $secondStepRadio = $('.secondStepRadio');
-$secondStepRadio.click(function() {
-    $secondStepRadio.each(function() {
-        $(this).parent().parent('.toggleWrapper').toggleClass('active', this.checked);       
-    });
-});
-
-var $CustomerFacingDisplaySelect = $('.additionalHardwareAndSoftware');
-$CustomerFacingDisplaySelect.click(function() {
-    $CustomerFacingDisplaySelect.each(function() {
-        $(this).parent().parent('.toggleWrapper').toggleClass('active', this.checked);       
-    });
-});
-
-var $describeBusinessSelect = $('.additionalHardwareAndSoftware');
-$describeBusinessSelect.click(function() {
-    $describeBusinessSelect.each(function() {
-        $(this).parent().parent('.toggleWrapper').toggleClass('active', this.checked);       
-    });
-});
-
-
-
-
-       $("#set_2 .nextButton").click(function () {
-         //alert('Test');
-            $('.questionGroup').addClass('in');
-            $('#set_9.questionGroup').removeClass('in');
-            $('.completedBar').css("width", '40%');
-            $('.compleredBarText').html("ALMOST DONE! JUST A FEW MORE.");
-            $('.completedBar').html('40%');
-
-            $('#set_9 .backButton').attr("data-id", 'set_2');
-            $('#set_9 .nextButton').attr("data-id", 'set_3');
-        });
-
-
-
-      /*  $("#set_2 .nextButton").click(function () {
-         //alert('Test');
-            $('.questionGroup').addClass('in');
-            $('#set_3.questionGroup').removeClass('in');
-            $('.completedBar').css("width", '50%');
-            $('.compleredBarText').html("ALMOST DONE! JUST A FEW MORE.");
-            $('.completedBar').html('50%');
-        });*/
-
-        $("#set_3 .nextButton").click(function () {
-         //alert('Test');
-            $('.questionGroup').addClass('in');
-            $('#set_10.questionGroup').removeClass('in');
-            $('.completedBar').css("width", '80%');
-            $('.completedBar').html('80%');
-            $('.compleredBarText').html("");
-
-            $('#set_10 .backButton').attr("data-id", 'set_3');
-            $('#set_10 .nextButton').attr("data-id", 'Success');
-        });
-
-
-        
-        $("#set_4 .nextButton").click(function () {
-         //alert('Test');
-            $('.questionGroup').addClass('in');
-            $('#set_9.questionGroup').removeClass('in');
-            $('.completedBar').css("width", '40%');
-            $('.compleredBarText').html("ALMOST DONE! JUST A FEW MORE.");
-            $('.completedBar').html('40%');
-
-            $('#set_9 .backButton').attr("data-id", 'set_4');
-            $('#set_9 .nextButton').attr("data-id", 'set_5');
-        });
-
-        $("#set_5 .nextButton").click(function () {
-         //alert('Test');
-            $('.questionGroup').addClass('in');
-            $('#set_10.questionGroup').removeClass('in');
-            $('.completedBar').css("width", '80%');
-            $('.completedBar').html('80%');
-            $('.compleredBarText').html("");
-            $('#set_10 .backButton').attr("data-id", 'set_5');
-            $('#set_10 .nextButton').attr("data-id", 'Success');
-        });
-
-
-       /*  $("#set_6 .nextButton").click(function () {
-         //alert('Test');
-            $('.questionGroup').addClass('in');
-            $('#set_10.questionGroup').removeClass('in');
-            $('.completedBar').css("width", '75%');
-            $('.completedBar').html('75%');
-            $('.compleredBarText').html("");
-            $('#set_10 .backButton').attr("data-id", 'set_5');
-            $('#set_10 .nextButton').attr("data-id", 'Success');
-        });
-*/
-
-       $("#set_6 .nextButton").click(function () {
-         //alert('Test');
-            $('.questionGroup').addClass('in');
-            $('#set_7.questionGroup').removeClass('in');
-            $('.completedBar').css("width", '50%');
-            $('.completedBar').html('50%');
-            $('.compleredBarText').html("");
-        });
-
-        $("#set_7 .nextButton").click(function () {
-         //alert('Test');
-            $('.questionGroup').addClass('in');
-            $('#set_8.questionGroup').removeClass('in');
-            $('.completedBar').css("width", '75%');
-            $('.completedBar').html('75%');
-            $('.compleredBarText').html("");
-        });
-
-        $("#set_8 .nextButton").click(function () {
-         //alert('Test');
-            $('.questionGroup').addClass('in');
-            $('#set_10.questionGroup').removeClass('in');
-            $('.completedBar').css("width", '75%');
-            $('.completedBar').html('75%');
-            $('.compleredBarText').html("");
-            $('#set_10 .backButton').attr("data-id", 'set_8');
-            $('#set_10 .nextButton').attr("data-id", 'Success');
-        });
-
-        
-
-        $("#set_9 .nextButton").click(function () {      
-
-            var back_data_id = $(this).data('id');
-            var next_data_id = $(this).data('id');
-
-           // alert(next_data_id);
-           // return false;
-
-            $('.questionGroup').addClass('in');
-            // $('#set_6.questionGroup').removeClass('in');
-            $('.questionGroup#'+ back_data_id).removeClass('in');
-
-            $('.completedBar').css("width", '60%');
-            $('.completedBar').html('60%');
-            $('.compleredBarText').html("");
-         });
-
-
-
-      $("#set_2 .backButton").click(function () {        
-         $('.questionGroup').addClass('in');
-         $('#set_1.questionGroup').removeClass('in');
-         $('.completedBar').css("width", '0%');
-         $('.completedBar').html('');
-         $('.compleredBarText').html("");
-      });
-      
-      $("#set_3 .backButton").click(function () {        
-         $('.questionGroup').addClass('in');
-         $('#set_9.questionGroup').removeClass('in');
-         $('.completedBar').css("width", '40%');
-         $('.completedBar').html('40%');
-         $('.compleredBarText').html("GREAT PROGRESS! KEEP IT GOING.");
-      });
-     /* $("#set_3 .backButton").click(function () {        
-         $('.questionGroup').addClass('in');
-         $('#set_2.questionGroup').removeClass('in');
-         $('.completedBar').css("width", '20%');
-         $('.completedBar').html('20%');
-         $('.compleredBarText').html("GREAT PROGRESS! KEEP IT GOING.");
-      });*/
-
-      $("#set_4 .backButton").click(function () {        
-         $('.questionGroup').addClass('in');
-         $('#set_1.questionGroup').removeClass('in');
-         $('.completedBar').css("width", '0%');
-         $('.completedBar').html('');
-         $('.compleredBarText').html("");
-      });
-
-      $("#set_5 .backButton").click(function () {        
-         $('.questionGroup').addClass('in');
-         $('#set_4.questionGroup').removeClass('in');
-         $('.completedBar').css("width", '40%');
-         $('.completedBar').html('40%');
-         $('.compleredBarText').html("");
-      });
-      $("#set_6 .backButton").click(function () {        
-         $('.questionGroup').addClass('in');
-         $('#set_4.questionGroup').removeClass('in');
-         $('.completedBar').css("width", '0%');
-         $('.completedBar').html('');
-         $('.compleredBarText').html("");
-      });
-      $("#set_7 .backButton").click(function () {        
-         $('.questionGroup').addClass('in');
-         $('#set_6.questionGroup').removeClass('in');
-         $('.completedBar').css("width", '20%');
-         $('.completedBar').html('20%');
-         $('.compleredBarText').html("");
-      });
-
-      $("#set_8 .backButton").click(function () {        
-         $('.questionGroup').addClass('in');
-         $('#set_7.questionGroup').removeClass('in');
-         $('.completedBar').css("width", '60%');
-         $('.completedBar').html('60%');
-         $('.compleredBarText').html("");
-      });
-
-
-      $("#set_9 .backButton").click(function () {      
-
-         var back_data_id = $(this).data('id');
-         var next_data_id = $(this).data('id');
-
-         //alert( back_data_id, back_data_id);
-         //alert();
-
-         $('.questionGroup').addClass('in');
-        // $('#set_6.questionGroup').removeClass('in');
-         $('.questionGroup#'+ back_data_id).removeClass('in');
-
-         $('.completedBar').css("width", '20%');
-         $('.completedBar').html('20%');
-         $('.compleredBarText').html("");
-      });
-
-      $("#set_10 .backButton").click(function () {      
-
-         var back_data_id = $(this).data('id');
-         var next_data_id = $(this).data('id');
-
-         //alert( back_data_id, back_data_id);
-         //alert();
-
-         $('.questionGroup').addClass('in');
-         // $('#set_6.questionGroup').removeClass('in');
-         $('.questionGroup#'+ back_data_id).removeClass('in');
-
-         $('.completedBar').css("width", '60%');
-         $('.completedBar').html('60%');
-         $('.compleredBarText').html("");
-      });
-
-});
-
-
-$(document).ready(function() {
-   $("input[name$='selectbudget']").click(function() {
-         var budgetMonth = $(this).val();
-         $("div.selectbudget").hide();
-         $("#" + budgetMonth).show();
-   });
-});
-
-
-
-   
-</script>
 </html>
