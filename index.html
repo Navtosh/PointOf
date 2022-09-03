@@ -47,6 +47,7 @@
             </header>
          </div>
       </div>
+      <div id="output"></div>
       <div class="container-fluid main_container">
          <div class="container px-0">
             <div class="row">
@@ -95,7 +96,7 @@
                                               <div class="toggleWrapper ">
                                                  <label class="custom_radio">
                                                    <img alt="Restaurant POS System (POSRES)" src="images/complete.svg" class="icon">                                                   
-                                                   <input type="radio" id="POSRES" name="selec_pos" value="POSRES" class="firstStepRadio">
+                                                   <input type="radio" id="POSRES" name="selec_pos" value="Restaurant POS System (POSRES)" class="firstStepRadio">
                                                    <span class="checkmark"></span>
                                                    <div class="answerLabel">Restaurant POS System (POSRES)</div>
                                                  </label>
@@ -106,7 +107,7 @@
                                               <div class="toggleWrapper">
                                                 <label class="custom_radio">
                                                    <img alt="Retail POS System (POSRET)" src="images/sw.svg" class="icon">                                       
-                                                      <input type="radio" id="POSRET" name="selec_pos" value="POSRET" class="firstStepRadio" >
+                                                      <input type="radio" id="POSRET" name="selec_pos" value="Retail POS System (POSRET)" class="firstStepRadio" >
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel ">Retail POS System (POSRET)</div>
                                                  </label>
@@ -116,7 +117,7 @@
                                               <div class="toggleWrapper">
                                                 <label class="custom_radio">
                                                    <img alt="Credit Card Processing (CCP)" src="images/hw.svg" class="icon">
-                                                      <input type="radio" id="CCP" name="selec_pos" value="CCP" class="firstStepRadio">
+                                                      <input type="radio" id="CCP" name="selec_pos" value="Credit Card Processing (CCP)" class="firstStepRadio">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Credit Card Processing (CCP)</div>
                                                  </label>                                                 
@@ -145,7 +146,7 @@
                                              <div class="answerGroup ">
                                                 <div class="toggleWrapper ">
                                                    <label class="custom_checkbox">
-                                                      <input type="checkbox" id="businessTypeSelect" name="service" value="TableService" class="">
+                                                      <input type="checkbox" id="businessTypeSelect" name="businessTypeSelect" value="" class="">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel "><strong>Select All</strong></div>                                                        
                                                     </label>   
@@ -153,7 +154,7 @@
                                                 
                                                 <div class="toggleWrapper ">
                                                    <label class="custom_checkbox">
-                                                      <input type="checkbox" id="TableService" name="service" value="TableService" class="businessTypeSelect">
+                                                      <input type="checkbox" id="TableService" name="businessTypeSelect" value="Table Service" class="businessTypeSelect">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel ">Table Service</div>                                                        
                                                     </label>   
@@ -161,7 +162,7 @@
 
                                                 <div class="toggleWrapper ">
                                                    <label class="custom_checkbox">
-                                                      <input type="checkbox" id="CounterService" name="service" value="CounterService" class="businessTypeSelect">
+                                                      <input type="checkbox" id="CounterService" name="businessTypeSelect" value="Counter Service" class="businessTypeSelect">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Counter Service</div>                                                     
                                                    </label>   
@@ -169,7 +170,7 @@
 
                                                 <div class="toggleWrapper">
                                                    <label class="custom_checkbox">
-                                                      <input type="checkbox" id="Delivery" name="service" value="Delivery" class="businessTypeSelect">
+                                                      <input type="checkbox" id="Delivery" name="businessTypeSelect" value="Delivery" class="businessTypeSelect">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Delivery</div>                                                    
                                                    </label>   
@@ -178,7 +179,7 @@
                                                 <div class="toggleWrapper">
                                                    
                                                    <label class="custom_checkbox">
-                                                      <input type="checkbox" id="DriveThru" name="service" value="DriveThru" class="businessTypeSelect">
+                                                      <input type="checkbox" id="DriveThru" name="businessTypeSelect" value="Drive Thru" class="businessTypeSelect">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Drive Thru</div>                                                  
                                                    </label>   
@@ -187,7 +188,7 @@
                                              <div class="answerGroup ">
                                                 <div class="toggleWrapper">
                                                    <label class="custom_checkbox">
-                                                      <input type="checkbox" id="GhostKitchen" name="service" value="GhostKitchen" class="businessTypeSelect">
+                                                      <input type="checkbox" id="GhostKitchen" name="businessTypeSelect" value="Ghost Kitchen" class="businessTypeSelect">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Ghost Kitchen</div>                                               
                                                    </label>   
@@ -196,7 +197,7 @@
 
                                                 <div class="toggleWrapper">
                                                    <label class="custom_checkbox">
-                                                      <input type="checkbox" id="Cafeteria" name="service" value="Cafeteria" class="businessTypeSelect">
+                                                      <input type="checkbox" id="Cafeteria" name="businessTypeSelect" value="Cafeteria" class="businessTypeSelect">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Cafeteria</div>                                               
                                                    </label>   
@@ -205,7 +206,7 @@
 
                                                 <div class="toggleWrapper">
                                                    <label class="custom_checkbox">
-                                                      <input type="checkbox" id="FoodTruck" name="service" value="FoodTruck" class="businessTypeSelect">
+                                                      <input type="checkbox" id="FoodTruck" name="businessTypeSelect" value="Food Truck" class="businessTypeSelect">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Food Truck</div>                                              
                                                    </label>   
@@ -214,7 +215,7 @@
 
                                                 <div class="toggleWrapper">
                                                    <label class="custom_checkbox">
-                                                      <input type="checkbox" id="Catering" name="service" value="Catering" class="businessTypeSelect">
+                                                      <input type="checkbox" id="Catering" name="businessTypeSelect" value="Catering" class="businessTypeSelect">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Catering</div>                                           
                                                    </label>   
@@ -243,7 +244,7 @@
                                              <div class="answerGroup ">
                                                 <div class="toggleWrapper active">
                                                    <label class="custom_checkbox">
-                                                      <input type="checkbox" id="hardwareAndSoftware" name="service" value="" class="secondStepRadio">
+                                                      <input type="checkbox" id="hardwareAndSoftware" name="hardwareAndSoftware" value="" class="secondStepRadio">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel "><strong>Select All</strong></div>                                                        
                                                     </label>   
@@ -252,7 +253,7 @@
 
                                                 <div class="toggleWrapper ">
                                                    <label class="custom_checkbox">
-                                                         <input type="checkbox" id="TableService" name="service" value="TableService" class="secondStepRadio">
+                                                         <input type="checkbox" id="MobileOrderDevice" name="hardwareAndSoftware" value="Mobile Order Device" class="secondStepRadio">
                                                          <span class="checkmark"></span>
                                                          <div class="answerLabel ">Mobile Order Device</div>                                                        
                                                     </label>   
@@ -261,7 +262,7 @@
 
                                                 <div class="toggleWrapper ">
                                                    <label class="custom_checkbox">
-                                                      <input type="checkbox" id="CounterService" name="service" value="CounterService" class="secondStepRadio">
+                                                      <input type="checkbox" id="KitchenPrinter" name="hardwareAndSoftware" value="Kitchen Printer" class="secondStepRadio">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Kitchen Printer</div>                                                     
                                                    </label>   
@@ -270,7 +271,7 @@
 
                                                 <div class="toggleWrapper">
                                                    <label class="custom_checkbox">
-                                                      <input type="checkbox" id="Delivery" name="service" value="Delivery" class="secondStepRadio">
+                                                      <input type="checkbox" id="KitchenDisplaySystem" name="hardwareAndSoftware" value="Kitchen Display System" class="secondStepRadio">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Kitchen Display System</div>                                                    
                                                    </label>   
@@ -280,7 +281,7 @@
                                                 <div class="toggleWrapper">
                                                    
                                                    <label class="custom_checkbox">
-                                                      <input type="checkbox" id="DriveThru" name="service" value="DriveThru" class="secondStepRadio">
+                                                      <input type="checkbox" id="OnlineOrdering" name="hardwareAndSoftware" value="Online Ordering" class="secondStepRadio">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Online Ordering</div>                                                  
                                                    </label>   
@@ -289,7 +290,7 @@
                                                 <div class="toggleWrapper">
                                                    
                                                    <label class="custom_checkbox">
-                                                      <input type="checkbox" id="DriveThru" name="service" value="DriveThru" class="secondStepRadio">
+                                                      <input type="checkbox" id="IntegratedThirdPartyDelivery" name="hardwareAndSoftware" value="Integrated Third Party Delivery (Grubhub, etc.)" class="secondStepRadio">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Integrated Third Party Delivery (Grubhub, etc.)</div>                                                  
                                                    </label>   
@@ -298,7 +299,7 @@
                                                 <div class="toggleWrapper">
                                                    
                                                    <label class="custom_checkbox">
-                                                      <input type="checkbox" id="DriveThru" name="service" value="DriveThru" class="secondStepRadio">
+                                                      <input type="checkbox" id="QRCodeScan" name="hardwareAndSoftware" value="QR Code Scan" class="secondStepRadio">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">QR Code Scan</div>                                                  
                                                    </label>   
@@ -308,7 +309,7 @@
                                              <div class="answerGroup ">
                                                 <div class="toggleWrapper">
                                                    <label class="custom_checkbox">
-                                                      <input type="checkbox" id="GhostKitchen" name="service" value="GhostKitchen" class="secondStepRadio">
+                                                      <input type="checkbox" id="CustomerDisplay" name="hardwareAndSoftware" value="Customer Display" class="secondStepRadio">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Customer Display</div>                                               
                                                    </label>   
@@ -318,7 +319,7 @@
 
                                                 <div class="toggleWrapper">
                                                    <label class="custom_checkbox">
-                                                      <input type="checkbox" id="Cafeteria" name="service" value="Cafeteria" class="secondStepRadio">
+                                                      <input type="checkbox" id="Scale" name="hardwareAndSoftware" value="Scale" class="secondStepRadio">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Scale</div>                                               
                                                    </label>   
@@ -328,7 +329,7 @@
 
                                                 <div class="toggleWrapper">
                                                    <label class="custom_checkbox">
-                                                      <input type="checkbox" id="FoodTruck" name="service" value="FoodTruck" class="secondStepRadio">
+                                                      <input type="checkbox" id="GiftCards" name="hardwareAndSoftware" value="Gift Cards" class="secondStepRadio">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Gift Cards</div>                                              
                                                    </label>   
@@ -338,7 +339,7 @@
 
                                                 <div class="toggleWrapper">
                                                    <label class="custom_checkbox">
-                                                      <input type="checkbox" id="Catering" name="service" value="Catering" class="secondStepRadio">
+                                                      <input type="checkbox" id="Multi-Location" name="hardwareAndSoftware" value="Multi-Location" class="secondStepRadio">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Multi-Location</div>                                           
                                                    </label>   
@@ -346,7 +347,7 @@
                                                 </div>
                                                 <div class="toggleWrapper">
                                                    <label class="custom_checkbox">
-                                                      <input type="checkbox" id="Catering" name="service" value="Catering" class="secondStepRadio">
+                                                      <input type="checkbox" id="Inventory" name="hardwareAndSoftware" value="Inventory" class="secondStepRadio">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Inventory</div>                                           
                                                    </label>   
@@ -354,7 +355,7 @@
                                                 </div>
                                                 <div class="toggleWrapper">
                                                    <label class="custom_checkbox">
-                                                      <input type="checkbox" id="Catering" name="service" value="Catering" class="secondStepRadio">
+                                                      <input type="checkbox" id="Marketing" name="hardwareAndSoftware" value="Marketing" class="secondStepRadio">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Marketing</div>                                           
                                                    </label>   
@@ -386,7 +387,7 @@
                                              <div class="answerGroup ">
                                                 <div class="toggleWrapper ">
                                                    <label class="custom_checkbox">
-                                                      <input type="checkbox" id="retailTypeSelect" name="service" value="TableService" class="">
+                                                      <input type="checkbox" id="retailTypeSelect" name="retailTypeSelect" value="" class="">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel "><strong>Select All</strong></div>                                                        
                                                     </label>   
@@ -463,7 +464,7 @@
 
                                                 <div class="toggleWrapper">
                                                    <label class="custom_checkbox">
-                                                      <input type="checkbox" id="Other" name="retailTypeSelect" value="Other" class="retailTypeSelect">
+                                                      <input type="checkbox" id="retailTypeSelectOther" name="retailTypeSelect" value="Other" class="retailTypeSelect">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Other</div>                                           
                                                    </label>   
@@ -625,7 +626,7 @@
 
                                                 <div class="toggleWrapper ">
                                                    <label class="custom_checkbox">
-                                                         <input type="checkbox" id="CardPresentRestaurant" name="" value="Card Present Restaurant" class="describeBusiness">
+                                                         <input type="checkbox" id="CardPresentRestaurant" name="describeBusinessSelect" value="Card Present Restaurant" class="describeBusiness">
                                                          <span class="checkmark"></span>
                                                          <div class="answerLabel ">Card Present Restaurant</div>                                                        
                                                     </label>   
@@ -633,7 +634,7 @@
 
                                                 <div class="toggleWrapper ">
                                                    <label class="custom_checkbox">
-                                                      <input type="checkbox" id="CardPresentRetail" name="describeBusiness" value="Card Present Retail" class="describeBusiness">
+                                                      <input type="checkbox" id="CardPresentRetail" name="describeBusinessSelect" value="Card Present Retail" class="describeBusiness">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Card Present Retail</div>                                                     
                                                    </label>   
@@ -647,14 +648,14 @@
 
                                                 <div class="toggleWrapper">
                                                    <label class="custom_checkbox">
-                                                      <input type="checkbox" id="Services" name="describeBusiness" value="Services" class="describeBusiness">
+                                                      <input type="checkbox" id="Services" name="describeBusinessSelect" value="Services" class="describeBusiness">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Services</div>                                                    
                                                    </label>   
                                                 </div>
                                                 <div class="toggleWrapper">
                                                    <label class="custom_checkbox">
-                                                      <input type="checkbox" id="Online" name="describeBusiness" value="Online" class="describeBusiness">
+                                                      <input type="checkbox" id="Online" name="describeBusinessSelect" value="Online" class="describeBusiness">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Online</div>                                               
                                                    </label>   
@@ -663,7 +664,7 @@
 
                                                 <div class="toggleWrapper">
                                                    <label class="custom_checkbox">
-                                                      <input type="checkbox" id="describeBusinessOther" name="describeBusiness" value="Other" class="describeBusiness">
+                                                      <input type="checkbox" id="describeBusinessSelectOther" name="describeBusinessSelect" value="Other" class="describeBusiness">
                                                       <span class="checkmark"></span>
                                                       <div class="answerLabel">Other</div>                                               
                                                    </label>   
@@ -693,7 +694,7 @@
                                             <div class="answerGroup ">
                                                 <div class="toggleWrapper ">
                                                   <label class="custom_radio">
-                                                     <input type="radio" id="selectbudget" name="selectbudget" value="monthly" class="" checked>
+                                                     <input type="radio" id="selectbudget" name="selectbudget" value="monthly" class="">
                                                      <span class="checkmark"></span>
                                                      <div class="answerLabel">Yes</div>                                                     
                                                   </label>   
@@ -716,10 +717,10 @@
                                        </div>
                                        <div class="">  
                                           <div class="defaultErrorMessage" id="error7"></div>                                            
-                                          <div class="answerWrapper selectbudget " id="monthly" >
+                                          <div class="answerWrapper selectbudget " id="monthly" style="display:none;">
                                              <div class="NoteText"><strong>What is your average monthly dollar volume? </strong></div>
                                            <div>
-                                             <select class="moontlyDollarVolume" name="moontlyDollarVolume" id="moontlyDollarVolume">
+                                             <select class="moontlyDollarVolume" name="moontlyDollarVolume" id="moontlyDollarVolume" disabled>
                                                 <option value="">&nbsp;</option>
                                                 <option value="$10k or less">$10k or less</option>
                                                 <option value="between $11k and $50k">between $11k and $50k</option>
@@ -731,7 +732,7 @@
                                           <div class="answerWrapper selectbudget" id="projected" style="display:none;">
                                              <div class="NoteText"><strong>What is your projected monthly dollar volume?</strong></div>
                                            <div>
-                                             <select class="projectedDollarVolume" name="projectedDollarVolume" id="projectedDollarVolume">
+                                             <select class="projectedDollarVolume" name="projectedDollarVolume" id="projectedDollarVolume" disabled>
                                                 <option value="">&nbsp;</option>
                                                 <option value="$10k or less">$10k or less</option>
                                                 <option value="between $11k and $50k">between $11k and $50k</option>
@@ -930,7 +931,7 @@
                                      </div>
                                     <div class="navigationContainer">
                                        <button tabindex="-1" type="button" class="backButton"><span class="prevButtonLabel">Previous</span><span class="navIcon">▷</span></button>
-                                       <button type="" class="nextButton"><span class="nextButtonLabel">NEXT</span><span class="navIcon">▷</span></button>
+                                       <button type="submit" class="nextButton"><span class="nextButtonLabel">NEXT</span><span class="navIcon">▷</span></button>
                                     </div>
                                   </div>
                                  <!-- //Detail Form-->
@@ -1005,6 +1006,22 @@
             </footer>
          </div>
       </div>
+
+      <script>
+       $(document).ready(function() {
+            $('.quiz_form').submit(function() {
+                var x = $("form").serializeArray();
+                console.log( x );
+
+                $.each(x, function(i, field) {                  
+                   // $("#output").append(field.name + ":" + field.value + "<br/>" );
+                });
+
+                return false;
+            });
+        }); 
+
+      </script>
 
    </body>
 </html>

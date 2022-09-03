@@ -5,6 +5,10 @@ $(function() {
         $('.questionGroup').addClass('in');
 
         if ($("#POSRES").is(":checked")) {
+            $("#quantity").removeAttr("disabled");
+            $('#projectedDollarVolume').attr('disabled', true);
+            $('#moontlyDollarVolume').attr('disabled', true);
+
             $('form.quiz_form').trigger("reset");
             $(this).parent().parent('.toggleWrapper').addClass('active');
             $('#set_2.questionGroup').removeClass('in');
@@ -14,6 +18,10 @@ $(function() {
             $(this).prop("checked", "true");
 
         } else if ($("#POSRET").is(":checked")) {
+            $("#quantity").removeAttr("disabled");
+            $('#projectedDollarVolume').attr('disabled', true);
+            $('#moontlyDollarVolume').attr('disabled', true);
+
             $('form.quiz_form').trigger("reset");
             $(this).parent().parent('.toggleWrapper').addClass('active');
             $('#set_4.questionGroup').removeClass('in');
@@ -22,6 +30,9 @@ $(function() {
             $('.compleredBarText').html("GREAT PROGRESS! KEEP IT GOING.");
             $(this).prop("checked", "true");
         } else if ($("#CCP").is(":checked")) {
+            $("#quantity").attr("disabled", "disabled");
+            $('#projectedDollarVolume').attr('disabled', true);
+            $('#moontlyDollarVolume').attr('disabled', true);
             $('form.quiz_form').trigger("reset");
             $(this).parent().parent('.toggleWrapper').addClass('active');
             $('#set_6.questionGroup').removeClass('in');
@@ -115,7 +126,6 @@ $(function() {
 
 
     $("#set_2 .nextButton").click(function() {
-
 
         $(".businessTypeSelect").each(function() {
             if ($(this).prop('checked') == true) {
@@ -379,7 +389,21 @@ $(document).ready(function() {
         var budgetMonth = $(this).val();
         $("div.selectbudget").hide();
         $("#" + budgetMonth).show();
+
+        if ($(this).val()=='monthly') {
+            $('#moontlyDollarVolume').attr('disabled', false);
+            $('#projectedDollarVolume').attr('disabled', true);
+            //alert('Select 1');
+        } 
+        else if ($(this).val()=='projected') {
+            $('#projectedDollarVolume').attr('disabled', false);
+            $('#moontlyDollarVolume').attr('disabled', true);
+           // alert('Select 1');
+        }
+
     });
+
+
 
     $("#set_1 .nextButton").click(function() {
 
