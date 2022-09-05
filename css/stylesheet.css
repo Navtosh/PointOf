@@ -854,6 +854,16 @@ select {
 } 
 
 
+.successMessage{
+    text-align: center;
+    align-self: end;
+    padding: 22px;
+    margin-top: 12%;
+}
+
+.successMessage h1{
+    margin: 15px 0;
+}
 
 
 

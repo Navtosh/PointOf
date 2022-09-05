@@ -863,6 +863,7 @@
                                        <div class="questionGroupForm">
                                          <div class="questionWrapper">
                                            <div type="textsingle" class="questionText">Name: </div>
+                                           <div class="defaultErrorMessage" id="errorName"></div>
                                            <div class="answerWrapper ">
                                              <div class="answerWrapper ">
                                                <div>
@@ -875,6 +876,7 @@
                                          </div>
                                          <div class="questionWrapper">
                                           <div type="textsingle" class="questionText">Phone: </div>
+                                          <div class="defaultErrorMessage" id="errorPhone"></div>
                                           <div class="answerWrapper ">
                                             <div class="answerWrapper ">
                                               <div>
@@ -890,6 +892,7 @@
                                           
                                           <div class="questionWrapper">
                                              <div type="textsingle" class="questionText">Email: </div>
+                                             <div class="defaultErrorMessage" id="errorEmail"></div>
                                              <div class="answerWrapper">
                                                <div class="answerWrapper ">
                                                  <div>
@@ -905,6 +908,7 @@
                                         <div class="questionGroupForm">
                                           <div class="questionWrapper">
                                              <div type="textsingle" class="questionText">Zip: </div>
+                                             <div class="defaultErrorMessage" id="errorZip"></div>
                                              <div class="answerWrapper">
                                                <div class="answerWrapper ">
                                                  <div>
@@ -917,6 +921,7 @@
                                            </div>
                                           <div class="questionWrapper">
                                             <div type="textsingle" class="questionText">Best time to call: </div>
+                                            <div class="defaultErrorMessage" id="errorCallTime"></div>
                                             <div class="answerWrapper ">
                                               <div class="answerWrapper ">
                                                 <div>
@@ -931,8 +936,27 @@
                                      </div>
                                     <div class="navigationContainer">
                                        <button tabindex="-1" type="button" class="backButton"><span class="prevButtonLabel">Previous</span><span class="navIcon">▷</span></button>
-                                       <button type="submit" class="nextButton"><span class="nextButtonLabel">NEXT</span><span class="navIcon">▷</span></button>
+                                       <button type="submit" class="nextButton" onclick="SuccessForm();"><span class="nextButtonLabel">NEXT</span><span class="navIcon">▷</span></button>
                                     </div>
+                                  </div>
+                                 <!-- //Detail Form-->
+
+
+                                   <!-- Detail Form-->
+                                   <div class="questionGroup setTypeTwo in out" id="SuccessForm">
+                                    <div class="questionWrapperTransition">
+                                       <div class="successMessage">
+                                          <svg fill="#8cc63f" viewBox="0 0 268 267" color="#8cc63f" style="max-height: 75px;">
+                                            <path d="M207.665 84.322l18.016 29.558-120.39 73.373-18.015-29.558z" fill-rule="nonzero"></path>
+                                            <path d="M38.203 138.993l29.73-18.11 22.377 36.734-29.73 18.11z" fill-rule="nonzero"></path>
+                                            <path d="M59.685 174.294l29.79-18.135 18.083 29.707-29.79 18.135z" fill-rule="nonzero"></path>
+                                            <path d="M121 0c0 33.433-11.817 61.95-35.45 85.55C61.95 109.183 33.433 121 0 121s-61.967-11.817-85.6-35.45C-109.2 61.95-121 33.433-121 0s11.8-61.95 35.4-85.55C-61.967-109.183-33.433-121 0-121c33.433 0 61.95 11.817 85.55 35.45C109.183-61.95 121-33.433 121 0z" fill="none" stroke="#8cc63f" stroke-width="25.2" transform="matrix(1 0 0 .99884 133.793 133.452)"></path>
+                                          </svg>
+                                          <h1>Thanks!</h1>
+                                          <p>BuyerZoneClone has received your quote request. 
+                                             The team is in the process of reviewing the details of your inquiry and should there be a match within the network of sellers you will be contacted directly.</p>
+                                        </div>
+                                    <div class="navigationContainer"></div>
                                   </div>
                                  <!-- //Detail Form-->
                               </div>
@@ -940,10 +964,6 @@
 
                            </main>
                         </div>
-                       <!-- <div class="navigationContainer">
-                           <button tabindex="-1" type="button" class="backButton"><span class="prevButtonLabel">Previous</span><span class="navIcon">▷</span></button>
-                           <button type="submit" class="nextButton"><span class="nextButtonLabel">NEXT</span><span class="navIcon">▷</span></button>
-                        </div>-->
                         <div class="NoDisplayOnSmallAndMedium">
                            <div class="progressContainer">
                               <div class="completedBar" id="" style="width:0%"></div>

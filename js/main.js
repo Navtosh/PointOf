@@ -8,7 +8,6 @@ $(function() {
             $("#quantity").removeAttr("disabled");
             $('#projectedDollarVolume').attr('disabled', true);
             $('#moontlyDollarVolume').attr('disabled', true);
-
             $('form.quiz_form').trigger("reset");
             $(this).parent().parent('.toggleWrapper').addClass('active');
             $('#set_2.questionGroup').removeClass('in');
@@ -21,7 +20,6 @@ $(function() {
             $("#quantity").removeAttr("disabled");
             $('#projectedDollarVolume').attr('disabled', true);
             $('#moontlyDollarVolume').attr('disabled', true);
-
             $('form.quiz_form').trigger("reset");
             $(this).parent().parent('.toggleWrapper').addClass('active');
             $('#set_4.questionGroup').removeClass('in');
@@ -415,3 +413,44 @@ $(document).ready(function() {
         });
     });
 });
+
+
+
+function SuccessForm() {
+    var valid = true;  
+
+    if ($('#Name').val() == '') {
+        $("#errorName").html('This information is required.');
+        valid = false;
+    } 
+    if ($('#Phone').val() == '') {
+        $("#errorPhone").html('This information is required.');
+        valid = false;
+    } 
+    if ($('#Email').val() == '') {
+        $("#errorEmail").html('This information is required.');
+        valid = false;
+    } 
+    if ($('#Zip').val() == '') {
+        $("#errorZip").html('This information is required.');
+        valid = false;
+    } 
+    if ($('#BestCallTime').val() == '') {
+        $("#errorCallTime").html('This information is required.');
+        valid = false;
+    } 
+
+    
+    if(valid) {
+        $('.questionGroup').addClass('in');
+
+        $('.completedBar').css("width", '100%');
+        $('.completedBar').html('100%');
+        $('.compleredBarText').remove();
+         $('#SuccessForm.questionGroup').removeClass('in');
+        
+    }
+
+    
+
+}
