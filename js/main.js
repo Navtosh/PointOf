@@ -418,32 +418,26 @@ $(document).ready(function() {
 
 function SuccessForm() {
     var valid = true;  
+    var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
 
-    if ($('#Name').val() == '') {
-        $("#errorName").html('This information is required.');
-        valid = false;
-    } 
-    if ($('#Phone').val() == '') {
-        $("#errorPhone").html('This information is required.');
-        valid = false;
-    } 
     if ($('#Email').val() == '') {
         $("#errorEmail").html('This information is required.');
         valid = false;
     } 
+    // if(!emailReg.test($('#Email').val() == '')) {
+    //         $("#errorEmail").html('Enter a valid email address.');
+    //         valid = false;
+    //     }
+
     if ($('#Zip').val() == '') {
         $("#errorZip").html('This information is required.');
-        valid = false;
-    } 
-    if ($('#BestCallTime').val() == '') {
-        $("#errorCallTime").html('This information is required.');
         valid = false;
     } 
 
     
     if(valid) {
+       // alert('Test');
         $('.questionGroup').addClass('in');
-
         $('.completedBar').css("width", '100%');
         $('.completedBar').html('100%');
         $('.compleredBarText').remove();
