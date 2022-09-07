@@ -409,6 +409,8 @@ $(document).ready(function() {
         $(".firstStepRadio").each(function() {
             if ($(this).attr("checked") != "checked") {
                 $("#msg").html("Please provide an answer (don't worry, it's not set in stone).");
+            } else {
+                
             }
         });
     });
