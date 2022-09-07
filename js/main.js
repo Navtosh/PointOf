@@ -113,7 +113,7 @@ $(function() {
         });
     });
 
-    var $describeBusinessSelect = $('.additionalHardwareAndSoftware');
+    var $describeBusinessSelect = $('.describeBusiness');
     $describeBusinessSelect.click(function() {
         $describeBusinessSelect.each(function() {
             $(this).parent().parent('.toggleWrapper').toggleClass('active', this.checked);
