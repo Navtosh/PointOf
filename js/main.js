@@ -403,7 +403,7 @@ $(document).ready(function() {
 
 
 
-    $("#set_1 .nextButton").click(function() {
+    $("#set_1 .nextButton").on( "click", function() {
 
         var atLeastOneChecked = false;
         $(".firstStepRadio").each(function() {

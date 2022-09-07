@@ -613,7 +613,7 @@ select {
   /* Style the indicator (dot/circle) */
   .custom_radio .checkmark:after {
     top: 6px;
-    left: 6px;
+    left: 5px;
     width: 9px;
     height: 9px;
     border-radius: 50%;
@@ -678,7 +678,7 @@ select {
   .custom_checkbox input:checked ~ .checkmark:after {
     display: block;
     content: '\2713';
-    color: #E6DBCD;
+    color: #fff;
     font-size: 18px;
     font-weight: bold;
   }
