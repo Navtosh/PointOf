@@ -418,9 +418,11 @@ $(document).ready(function() {
 
 function SuccessForm() {
     var valid = true;  
-    var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+    var pattern = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
 
-    if ($('#Email').val() == '') {
+    $email = $('#Email');
+
+    if ($email.val() == '') {
         $("#errorEmail").html('This information is required.');
         valid = false;
     } 
@@ -428,6 +430,13 @@ function SuccessForm() {
     //         $("#errorEmail").html('Enter a valid email address.');
     //         valid = false;
     //     }
+
+    if($email.val() !== ""){
+        if(!pattern.test($email.val())){
+            $("#errorEmail").html('Enter a valid email address.');               
+            valid  = false;
+        }
+    }
 
     if ($('#Zip').val() == '') {
         $("#errorZip").html('This information is required.');
