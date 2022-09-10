@@ -1,12 +1,7 @@
 $(function() {
 
     $(".firstStepRadio").on('click', function() {
-        var dataId = $(this).attr("data-id");
-     	//$('.nextButton').attr("data-id", dataId);
-        
-       $('#set_1 .nextButton').attr("data-id", dataId);
-
-       $('#set_1 .toggleWrapper').removeClass('active');
+        $('#set_1 .toggleWrapper').removeClass('active');
         $('#set_1.questionGroup').addClass('in');
 
         if ($("#POSRES").is(":checked")) {
@@ -15,12 +10,11 @@ $(function() {
             $('#moontlyDollarVolume').attr('disabled', true);
             $('form.quiz_form').trigger("reset");
             $(this).parent().parent('.toggleWrapper').addClass('active');
-           $('#set_2.questionGroup').removeClass('in');
+            $('#set_2.questionGroup').removeClass('in');
             $('.completedBar').css("width", '20%');
             $('.completedBar').html('20%');
             $('.compleredBarText').html("GREAT PROGRESS! KEEP IT GOING.");
-           $(this).prop("checked", "true");
-           //$('#set_1 .nextButton').attr("data-id", 'set_2');
+            $(this).prop("checked", "true");
             
         } else if ($("#POSRET").is(":checked")) {
             $("#quantity").removeAttr("disabled");
@@ -33,23 +27,22 @@ $(function() {
             $('.completedBar').html('20%');
             $('.compleredBarText').html("GREAT PROGRESS! KEEP IT GOING.");
             $(this).prop("checked", "true");
-           //$('#set_1 .nextButton').attr("data-id", 'set_4');
         } else if ($("#CCP").is(":checked")) {
             $("#quantity").attr("disabled", "disabled");
             $('#projectedDollarVolume').attr('disabled', true);
             $('#moontlyDollarVolume').attr('disabled', true);
             $('form.quiz_form').trigger("reset");
             $(this).parent().parent('.toggleWrapper').addClass('active');
-          $('#set_6.questionGroup').removeClass('in');
+            $('#set_6.questionGroup').removeClass('in');
             $('.completedBar').css("width", '20%');
             $('.completedBar').html('20%');
             $('.compleredBarText').html("GREAT PROGRESS! KEEP IT GOING.");
             $(this).prop("checked", "true");
-           // $('#set_1 .nextButton').attr("data-id", 'set_6');
         } else {
             $('#set_1.questionGroup').removeClass('in');
         }
     });
+
 
 
     $("#businessTypeSelect").click(function() {
@@ -154,8 +147,8 @@ $(function() {
     });
 
 
-
     $("#set_3 .nextButton").click(function() {
+
         $(".secondStepRadio").each(function() {
             if ($(this).prop('checked') == true) {
                 // alert('OK');
@@ -173,6 +166,9 @@ $(function() {
                 $("#error3").html("Please provide an answer (don't worry, it's not set in stone).");
             }
         });
+
+
+
     });
 
 
@@ -269,10 +265,12 @@ $(function() {
                 $("#error8").html("Please provide an answer (don't worry, it's not set in stone).");
             }
         });
+
+
     });
 
 
-    
+
     $("#set_9 .nextButton").click(function() {
         //var qtyVal = 
         if ($("#quantity").val() == "") {
@@ -322,13 +320,15 @@ $(function() {
     $("#set_5 .backButton").click(function() {
         $('.questionGroup').addClass('in');
         $('#set_9.questionGroup').removeClass('in');
+
         $('.completedBar').css("width", '40%');
         $('.completedBar').html('40%');
         $('.compleredBarText').html("ALMOST DONE! JUST A FEW MORE.");
         $('#set_10 .backButton').attr("data-id", 'set_8');
         $('#set_10 .nextButton').attr("data-id", 'Success');
-    });
 
+
+    });
     $("#set_6 .backButton").click(function() {
         $('.questionGroup').addClass('in');
         $('#set_1.questionGroup').removeClass('in');
@@ -367,7 +367,6 @@ $(function() {
         $('.compleredBarText').html("GREAT PROGRESS! KEEP IT GOING.");
     });
 
-    
     $("#set_10 .backButton").click(function() {
 
         var back_data_id = $(this).data('id');
@@ -401,18 +400,19 @@ $(function() {
     });
 
 
-    $('#set_1  .nextButton').on("click", function(){
-        var dataId1 = $(this).attr("data-id");
-        if(dataId1 == ' '){
-            alert('Test');
-            $("#msg").html("Please provide an answer (don't worry, it's not set in stone).");
-        } else{
-            $('.questionGroup').addClass('in');
-            $('.questionGroup#' + dataId1).removeClass('in');   
-            $("#msg").html("");
-        }
-        
-      });
+
+    $("#set_1 .nextButton").on( "click", function() {
+
+        var atLeastOneChecked = false;
+        $(".firstStepRadio").each(function() {
+            if ($(this).attr("checked") != "checked") {
+                $("#msg").html("Please provide an answer (don't worry, it's not set in stone).");
+            } else {
+                
+            }
+        });
+    });
+
 
     $("#set_10 .nextButton").on( "click", function() {
         var valid = true;  
@@ -425,6 +425,11 @@ $(function() {
             $("#errorEmail").html('This information is required.');
             valid = false;
         } 
+        // if(!emailReg.test($('#Email').val() == '')) {
+        //         $("#errorEmail").html('Enter a valid email address.');
+        //         valid = false;
+        //     }
+
         if($email.val() !== ""){
             if(!pattern.test($email.val())){
                 $("#errorEmail").html('Enter a valid email address.');               
@@ -435,9 +440,11 @@ $(function() {
         if ($('#Zip').val() == '') {
             $("#errorZip").html('This information is required.');
             valid = false;
-        }
+        } 
+
         
         if(valid) {
+        // alert('Test');
             $('.questionGroup').addClass('in');
             $('.completedBar').css("width", '100%');
             $('.completedBar').html('100%');
@@ -451,7 +458,7 @@ $(function() {
 
     $(".selectbudgetButton").on('change', function() {
         
-        $('#set_7 .toggleWrapper').removeClass('active');
+     $('#set_7 .toggleWrapper').removeClass('active');
 
         if ($("#selectbudget").is(":checked")) {
           //  alert('1');
