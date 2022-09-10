@@ -1,6 +1,6 @@
 $(function() {
 
-    $(".firstStepRadio").on('change', function() {
+    $(".firstStepRadio").on('click', function() {
         $('#set_1 .toggleWrapper').removeClass('active');
         $('#set_1.questionGroup').addClass('in');
 

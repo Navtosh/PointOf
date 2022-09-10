@@ -7,14 +7,6 @@ body{
     background-color: #f9f7f5;
 }
 
-input[type='text']:focus-visible,
-input[type='email']:focus-visible,
-input[type='number']:focus-visible{
-    border: 2px solid #1e73be;
-    outline: 0;
-}
-
-
 .container{
     max-width: 960px;
     margin: 0 auto;
@@ -80,7 +72,7 @@ input[type='number']:focus-visible{
 }
 
 .quiz_form {
-   background-color: #fff;
+    /* background-color: #e2e2e2; */
     margin-bottom: 0;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -153,11 +145,10 @@ input[type='number']:focus-visible{
     height: 50px;
     padding: 0 10px;
     width: 125px;
-    background-color: #6c757d;
+    background-color:#6c757d;
     box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
     text-align: center;
     position: relative;
-    background: #1e73be;
 }
 
 .nextButtonLabel {
@@ -178,15 +169,11 @@ input[type='number']:focus-visible{
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    background-color: transparent;
+    background-color:transparent;
     height: 25px;
     max-width: 576px;
     margin: 0 auto;
     width: 100%;
-    background: #1e73be;
-    padding-bottom: 3px;
-    line-height: 18px;
-    font-size: 14px;
 }
 
 .backButton {
@@ -287,9 +274,9 @@ input[type='number']:focus-visible{
 }
 
 .toggleWrapper {
-    border-radius: 4px;
-    border: 0;
-    background: #1e73be;
+    border-radius: 0;
+    border: 2px solid #6c757d;
+    background: linear-gradient(#f8f4f1,#e4dbcc);
     color: ;
     -webkit-background-position: 0;
     background-position: 0;
@@ -333,7 +320,6 @@ input[type='number']:focus-visible{
 .toggleWrapper .custom_radio .answerLabel{
     display: inline-block;
     vertical-align: middle;
-    color: #fff;
 }
 
 .toggleWrapper .custom_checkbox .checkmark{
@@ -347,7 +333,6 @@ input[type='number']:focus-visible{
     display: inline-block;
     vertical-align: middle;
     line-height: 20px;
-    color: #fff;
 }
 
 
@@ -377,16 +362,16 @@ input[type='number']:focus-visible{
     justify-content: center;
 }
 .setTypeTwo .toggleWrapper {
-    border-radius: 4px;
-    /* border: 2px solid #020202; */
-    background: #1e73be;
+    border-radius: 0;
+    border: 2px solid #6c757d;
+    background: linear-gradient(rgb(248, 244, 241), rgb(228, 219, 204)) 0px center / auto;
     cursor: pointer;
     font-size: 100%;
     margin-bottom: 10px;
     padding: 5px 10px;
     overflow: hidden;
     min-height: 54px;
-    line-height: 1;
+    line-height: 1;    
     -webkit-box-align: center;
     align-items: center;
     width: 100%;
@@ -394,13 +379,9 @@ input[type='number']:focus-visible{
     height: auto;
     margin-right: 0;
     display: flex;
-    flex-direction: row;
-    color: #fff;
-    border: 0;
+    flex-direction: row; 
 }
-.setTypeTwo .toggleWrapper:hover{
-    background: #1d5d95;
-}
+
 .setTypeTwo .toggleWrapper .form-control {
     margin-top: 0;
     padding: 4px 5px;
@@ -443,7 +424,7 @@ input[type='number']:focus-visible{
     height: 20px;
     width: 20px;
     margin: 0;
-    background-color: #fff;
+    background-color: #6c757d;
     border-radius: 50%;
     margin-bottom: 0;
 }
@@ -470,7 +451,7 @@ input[type='number']:focus-visible{
     height: 20px;
     width: 20px;
     margin: 0;
-    background-color: #fff;
+    background-color: #6c757d;
     border-radius: 0;
     margin-bottom: 0;
 }
@@ -565,7 +546,7 @@ input[type='number']:focus-visible{
 .textInput,
 select {
     border-radius: 6px;
-    border: 2px solid #1e73be ;
+    border: 2px solid #9ec5fe;
     font-size: 1.12246rem;
     padding: 10px;
     width: 100%;
@@ -602,19 +583,19 @@ select {
     height: 20px;
     width: 20px;
     margin: 0 auto;
-    background-color: #fff;
+    background-color: #6c757d;
     border-radius: 50%;
     margin-bottom: 5px;
   }
   
   /* On mouse-over, add a grey background color */
   .custom_radio:hover input ~ .checkmark {
-    background-color: #fff;
+    background-color: #4d545a;
   }
   
   /* When the radio button is checked, add a blue background */
   .custom_radio input:checked ~ .checkmark {
-    background-color: #fff;
+    background-color: #4d545a;
   }
   
   /* Create the indicator (the dot/circle - hidden when not checked) */
@@ -636,7 +617,7 @@ select {
     width: 9px;
     height: 9px;
     border-radius: 50%;
-    background: #202454;
+    background: #fff;
   }
 
   /* Custom Radio button */
@@ -671,19 +652,19 @@ select {
     height: 20px;
     width: 20px;
     margin: 0 auto;
-    background-color: #fff;
+    background-color: #4d545a;
     border-radius: 50%;
     margin-bottom: 5px;
   }
   
   /* On mouse-over, add a grey background color */
   .custom_checkbox:hover input ~ .checkmark {
-    background-color: #fff;
+    background-color: #4d545a;
   }
   
   /* When the radio button is checked, add a blue background */
   .custom_checkbox input:checked ~ .checkmark {
-    background-color: #fff;
+    background-color: #4d545a;
   }
   
   /* Create the indicator (the dot/circle - hidden when not checked) */
@@ -697,7 +678,7 @@ select {
   .custom_checkbox input:checked ~ .checkmark:after {
     display: block;
     content: '\2713';
-    color: #202454;
+    color: #fff;
     font-size: 18px;
     font-weight: bold;
   }
@@ -717,7 +698,7 @@ select {
 
 .toggleWrapper.active {
     /* background: linear-gradient(rgb(202, 184, 154), rgb(223, 204, 189)) 0px center / auto; */
-    background: #202454;
+    background:linear-gradient(#ededed, #bebebe) 0px center / auto;
 }
 .completedBar {
     background-color: rgb(87, 139, 199);
@@ -726,12 +707,11 @@ select {
     line-height: 40px;
     text-align: center;
     color: #fff;
-    line-height: 20px;
-    font-size: 14px;
+    line-height: 26px;
     text-align: center;
     color: #fff;
-    background-color: #28a745;
-    /* background-image: linear-gradient(45deg,rgba(255,255,255,.15) 16%,transparent 10%,transparent 41%,rgba(255,255,255,.15) 35%,rgba(255,255,255,.15) 76%,transparent 61%,transparent); */
+    background-color: #007bff;
+    background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
     background-size: 1rem 1rem;
 }
 
@@ -770,7 +750,7 @@ select {
 
 .motivationMessage {
     align-self: center;
-    color: #fff;
+    color: rgb(162, 158, 146);
     padding-left: 10px;
 }
 
@@ -812,7 +792,7 @@ select {
         max-width: 536px;
         margin: 25px auto;
         padding: 0;
-        border: 3px solid #1e73be;
+        border: 2px solid #b2adad;
     }
     .out{
         opacity: 1;
@@ -893,11 +873,11 @@ select {
         height: auto;
         position: static;
         width: auto;
-        z-index: 0;
+        z-index: 0;        
         position: absolute;
-        left: -14px;
-        right: -14px;
-        bottom: -59px;
+        left: -15px;
+        right: -15px;
+        bottom: -61px;
     }
     .nextButton {
         box-shadow: none;
@@ -993,14 +973,12 @@ select {
    
         
     .backButton {
-        background-color: #202454;
+        background-color:rgb(162, 158, 146);
         border: none;
         box-shadow: none;
         color: rgb(255, 255, 255);
         transform: rotate(180deg);
         width: 20%;
-        border-left: 1px solid #fff;
-        /* margin-left: -1px;*/
     }
 
     .backButton {
@@ -1011,7 +989,7 @@ select {
         width: 20%
     }
     .backButton:hover {
-        background-color:#1e73be;
+        background-color: rgb(162, 158, 146);
     }
     
    
