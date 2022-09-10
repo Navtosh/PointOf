@@ -1,8 +1,8 @@
 $(function() {
 
-    $(".firstStepRadio").click(function() {
-        $('.toggleWrapper').removeClass('active');
-        $('.questionGroup').addClass('in');
+    $(".firstStepRadio").on('change', function() {
+        $('#set_1 .toggleWrapper').removeClass('active');
+        $('#set_1.questionGroup').addClass('in');
 
         if ($("#POSRES").is(":checked")) {
             $("#quantity").removeAttr("disabled");
@@ -42,6 +42,7 @@ $(function() {
             $('#set_1.questionGroup').removeClass('in');
         }
     });
+
 
 
     $("#businessTypeSelect").click(function() {
@@ -379,10 +380,7 @@ $(function() {
         $('.compleredBarText').html("");
     });
 
-});
-
-
-$(document).ready(function() {
+    
     $("input[name$='selectbudget']").click(function() {
         var budgetMonth = $(this).val();
         $("div.selectbudget").hide();
@@ -407,55 +405,73 @@ $(document).ready(function() {
 
         var atLeastOneChecked = false;
         $(".firstStepRadio").each(function() {
-            if ($(this).attr("checked") != "checked") {
+            if ($('.firstStepRadio').attr("checked") != "checked") {
                 $("#msg").html("Please provide an answer (don't worry, it's not set in stone).");
             } else {
-                
+                alert('HAHA');
             }
         });
     });
+
+
+
+
+    $("#set_10 .nextButton").on( "click", function() {
+        var valid = true;  
+    // var pattern = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+        var pattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
+
+        $email = $('#Email');
+
+        if ($email.val() == '') {
+            $("#errorEmail").html('This information is required.');
+            valid = false;
+        } 
+        // if(!emailReg.test($('#Email').val() == '')) {
+        //         $("#errorEmail").html('Enter a valid email address.');
+        //         valid = false;
+        //     }
+
+        if($email.val() !== ""){
+            if(!pattern.test($email.val())){
+                $("#errorEmail").html('Enter a valid email address.');               
+                valid  = false;
+            }
+        }
+
+        if ($('#Zip').val() == '') {
+            $("#errorZip").html('This information is required.');
+            valid = false;
+        } 
+
+        
+        if(valid) {
+        // alert('Test');
+            $('.questionGroup').addClass('in');
+            $('.completedBar').css("width", '100%');
+            $('.completedBar').html('100%');
+            $('.compleredBarText').remove();
+            $('#SuccessForm.questionGroup').removeClass('in');
+            
+        }    
+
+    });
+
+
+    $(".selectbudgetButton").on('change', function() {
+        
+     $('#set_7 .toggleWrapper').removeClass('active');
+
+        if ($("#selectbudget").is(":checked")) {
+          //  alert('1');
+            $(this).parent().parent('.toggleWrapper').addClass('active');
+            $(this).prop("checked", "true");
+
+        } else if ($("#selectNobudget").is(":checked")) {
+          //  alert('2');
+            $(this).parent().parent('.toggleWrapper').addClass('active');
+            $(this).prop("checked", "true");        
+        }
+    });
 });
 
-
-
-function SuccessForm() {
-    var valid = true;  
-    var pattern = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
-
-    $email = $('#Email');
-
-    if ($email.val() == '') {
-        $("#errorEmail").html('This information is required.');
-        valid = false;
-    } 
-    // if(!emailReg.test($('#Email').val() == '')) {
-    //         $("#errorEmail").html('Enter a valid email address.');
-    //         valid = false;
-    //     }
-
-    if($email.val() !== ""){
-        if(!pattern.test($email.val())){
-            $("#errorEmail").html('Enter a valid email address.');               
-            valid  = false;
-        }
-    }
-
-    if ($('#Zip').val() == '') {
-        $("#errorZip").html('This information is required.');
-        valid = false;
-    } 
-
-    
-    if(valid) {
-       // alert('Test');
-        $('.questionGroup').addClass('in');
-        $('.completedBar').css("width", '100%');
-        $('.completedBar').html('100%');
-        $('.compleredBarText').remove();
-         $('#SuccessForm.questionGroup').removeClass('in');
-        
-    }
-
-    
-
-}
